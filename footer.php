@@ -1,5 +1,5 @@
 			<footer>
-				footer
+				footer goes here
 			</footer>
 		</div>
 	</section>
