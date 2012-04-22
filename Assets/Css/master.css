@@ -16,8 +16,6 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 /* setup */
 html,body {
-	width:100%;
-	height:100%;
 	font-family:Arial,Helvetica,sans-serif;
 	font-size:12px;
 	color:#333;
@@ -28,7 +26,7 @@ html {
 }
 
 body {
-	background:url('../Images/bg_logo.png') right 500px no-repeat;
+	background:url('../Images/bg_logo.png') right bottom no-repeat;
 }
 
 #wrapper {
@@ -49,7 +47,11 @@ header h1 a {
 	display:block;
 	width:100%;
 	text-indent:-9999px;
+	position:relative;
+	z-index:99;
 }
+
+.ie7 header h1 a, .ie8 header h1 a, .ie9 header h1 a { background:url('::/Images/blank.gif') top left repeat; }
 
 header h1 span {
 	position:absolute;
@@ -132,8 +134,104 @@ header nav a:hover {
 }
 
 
-/* content */
 
+/* sections */
+.full {
+	width:100%;
+	float:left;
+	background:blue;
+	position:relative;
+}
+
+.standard {
+	width:75%;
+	float:left;
+}
+
+aside {
+	width:25%;
+	float:right;
+}
+
+
+/* slideshow */
+.slideshow > ul {
+	float:left;
+	background:green;
+}
+.slideshow > ul li {
+	display:none;
+}
+
+.slideshow > ul li:first-child, .slideshow > ul li.active {
+	display:block;
+}
+
+.slideshow .previous, .slideshow .next {
+	position:absolute;
+	top:135px;
+	z-index:99;
+	display:none;
+	width:30px;
+	height:49px;
+	cursor:pointer;
+	text-indent:-9999px;
+}
+
+.slideshow .previous { 
+	left:15px;
+	background:url('../Images/slide_prev.png') left top no-repeat;
+}
+
+.slideshow .next { 
+	right:15px;
+	background:url('../Images/slide_next.png') left top no-repeat;
+}
+
+.slideshow .controls {
+	float:left;
+	width:100%;
+	background-size:100%;
+	padding:25px 0 40px;
+	text-align:center;
+	margin:0 auto;
+}
+
+.slideshow .controls ul {
+	margin:0 auto;
+	display:inline-block;
+}
+
+.ie7 .slideshow .controls ul {
+	zoom:1;
+	display:inline;
+}
+
+.slideshow .controls li {
+	float:left;
+	width:10px;
+	height:10px;
+	cursor:pointer;
+	margin:0 3px;
+	text-indent:-9999px;
+	background:url(../Images/slide_normal.png) center no-repeat;
+	-moz-transition:all .5s;
+	-webkit-transition:all .5s;
+	-o-transition:all .5s;
+	transition:all .5s;
+}
+
+.slideshow .controls li.active { 
+	background:url(../Images/slide_active.png) center no-repeat; 
+}
+
+
+
+
+
+
+
+/* content */
 section.content {
 	float:left;
 	background:#fff;
@@ -149,6 +247,10 @@ section .align {
 	padding:40px;
 }
 
+
+
+
+/* big navigation */
 section nav ul {
 	padding:0 0 40px;
 	float:left;
