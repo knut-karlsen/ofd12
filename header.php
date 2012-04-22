@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	
-<title>Olavsfestdagene 2012</title>
+<title>Olavsfestdagene 2012 - OK</title>
 	
 <link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('template_directory'); ?>/Assets/Css/master.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('template_directory'); ?>/Assets/Css/events.css" />
