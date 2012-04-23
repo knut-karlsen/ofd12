@@ -168,7 +168,6 @@ aside {
 	width:32%;
 	float:right;
 	position:relative;
-	background:blue;
 }
 
 
@@ -535,7 +534,8 @@ section li.search input[type='submit'] {
 
 /* sidebar */
 .calendar {
-	padding:10px;
+	padding:20px;
+	margin-bottom:25px;
 	background:#6cb580;
 }
 
@@ -561,8 +561,111 @@ section li.search input[type='submit'] {
 
 .calendar h4 {
 	font-size:16px;
+}
+
+.calendar table {
+	color:#83816f;
+  display:table;
+  font-size:22px;
+  width:100%;
+  font-family:'proxima-nova',Arial,Helvetica,sans-serif;
+  text-align:center;
+  margin-top:20px;
+}
+
+.calendar th {
+	background:#ea5b56;
+	color:#fff;
+	font-size:10px;
+	font-weight:800;
+	text-transform:uppercase;
+	padding:4px 0;
+	border-left:2px solid #6cb580;
+}
+
+.calendar th:first-child {
+	border-left:none;
+}
+
+.calendar td {
+	background:#a7d2b8;
+	border-top:2px solid #6cb580;
+	border-left:2px solid #6cb580;
+}
+
+.calendar td:first-child {
+	border-left:none;
+}
+
+.calendar td a {
+	display:block;
+	background:#89caef;
+	padding:4px 0;
+	text-decoration:none;
+	color:#303030;
+}
+
+.sponsors img {
+	display:block;
 	margin-bottom:10px;
 }
+
+.sponsors a {
+	color:#212121;
+	text-decoration:none;
+	font-weight:800;
+}
+
+.module h1, .module h2, .module h3, .module h4, .module h5, .module h6 {
+	margin-bottom:10px;
+	font-weight:800;
+}
+
+.module h1 {
+	font-size:36px;
+}
+
+.module h2 {
+	font-size:30px;
+}
+
+.module h3 {
+	font-size:22px;
+}
+
+.module h4 {
+	font-size:16px;
+}
+
+.module h5 {
+	font-size:14px;
+}
+
+.module h6 {
+	font-size:12px;
+}
+
+.module {
+	padding:20px;
+	border:1px solid #999;
+	margin-bottom:25px;
+	background:#fff;
+	font-family:'proxima-nova',Arial,Helvetica,sans-serif;
+	font-size:15px;
+	line-height:20px;
+}
+
+.module.blue {
+	background:#0091d2;
+	border:none;
+	color:#fff;
+}
+
+.facebook {
+	border:1px solid #999;
+	background:#fff;
+}
+
 
 
 /* footer */
@@ -593,6 +696,7 @@ footer .info a {
 footer .madeby {
 	float:right;
 	width:25%;
+	text-align:right;
 }
 
 footer .madeby a {

@@ -39,6 +39,25 @@
 		</table>
 	</div>
 	
+	<div class="module sponsors">
+		<img src="Assets/Images/sponsor_adressa.jpg" alt="" /><br/>	
+		<img src="Assets/Images/sponsor_tronderenergi.jpg" alt="" /><br/>	
+		<img src="Assets/Images/sponsor_smn.jpg" alt="" />
+		<a href="#">Alle samarbeidspartnere</a>
+	</div>
+	
+	<div class="module blue cf">
+		<h3>Spelpakke 2012</h3>
+		<p>
+			<img src="Assets/Images/dummy_round.jpg" alt="" style="float:right; margin-top:-30px;" />
+			Spelpakke: Opplev Olavsfestdagene og Spelet på Stiklestad.
+		</p>
+	</div>
+	
+	<div class="facebook">
+		likebox...
+	</div>
+	
 	
 	
 </aside>
