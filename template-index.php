@@ -74,7 +74,7 @@
 				<a href="#">
 				<figure>
 					<img src="Assets/Images/dummy_square.jpg" alt="" />
-					<img src="Assets/Images/overlay_circle.png" alt="" class="overlay" />
+					<img src="Assets/Images/overlay_circle.gif" alt="" class="overlay" />
 				</figure>
 				<h3>Olavsfestdagenes lorem ipsum</h3>
 				</a>
@@ -84,7 +84,7 @@
 				<a href="#">
 				<figure>
 					<img src="Assets/Images/dummy_square.jpg" alt="" />
-					<img src="Assets/Images/overlay_circle.png" alt="" class="overlay" />
+					<img src="Assets/Images/overlay_circle.gif" alt="" class="overlay" />
 				</figure>
 				<h3>Olavsfestdagenes lorem ipsum</h3>
 				</a>
@@ -94,7 +94,7 @@
 				<a href="#">
 				<figure>
 					<img src="Assets/Images/dummy_square.jpg" alt="" />
-					<img src="Assets/Images/overlay_circle.png" alt="" class="overlay" />
+					<img src="Assets/Images/overlay_circle.gif" alt="" class="overlay" />
 				</figure>
 				<h3>Olavsfestdagenes lorem ipsum</h3>
 				</a>
@@ -104,7 +104,7 @@
 				<a href="#">
 				<figure>
 					<img src="Assets/Images/dummy_square.jpg" alt="" />
-					<img src="Assets/Images/overlay_circle.png" alt="" class="overlay" />
+					<img src="Assets/Images/overlay_circle.gif" alt="" class="overlay" />
 				</figure>
 				<h3>Olavsfestdagenes lorem ipsum</h3>
 				</a>

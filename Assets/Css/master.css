@@ -27,13 +27,14 @@ html {
 	background:#9cd5f3 url('../Images/bg_pattern.png') left top repeat;
 }
 
-body {
-	background:url('../Images/bg_logo.png') right bottom no-repeat;
+@media screen and (min-width: 1480px) { 
+	body { background:url('../Images/bg_logo.png') right bottom no-repeat; }
 }
 
 #wrapper {
 	margin:0 auto;
-	width:1020px;
+	min-width:960px;
+	max-width:1020px;
 }
 
 b,strong {
@@ -204,7 +205,7 @@ aside {
 	font-size:24px;
 	line-height:30px;
 	font-weight:normal;
-	font-family:'droid-serif',Arial,Helvetica,sans-serif;
+	font-family:'droid-serif',serif;
 	background:url('../Images/slide_headline_bg.png') left top repeat;
 	display:inline-block;
 	padding:10px 15px;
@@ -323,12 +324,14 @@ article figure .overlay {
 	pointer-events:none;
 	z-index:2;
 	width:100%;
+	-ms-interpolation-mode:bicubic;
 }
 
 .colored figure img:first-child {
 	border-radius:80px;
 	-moz-border-radius:80px;
 	-webkit-border-radius:80px;
+	-o-border-radius:80px;
 }
 
 .colored h3 {
@@ -607,6 +610,8 @@ section li.search input[type='submit'] {
 
 .sponsors img {
 	display:block;
+	width:100%;
+	max-width:250px;
 	margin-bottom:10px;
 }
 
@@ -619,6 +624,8 @@ section li.search input[type='submit'] {
 .module h1, .module h2, .module h3, .module h4, .module h5, .module h6 {
 	margin-bottom:10px;
 	font-weight:800;
+	position:relative;
+	z-index:2;
 }
 
 .module h1 {
@@ -666,6 +673,9 @@ section li.search input[type='submit'] {
 	background:#fff;
 }
 
+.fb-like-box, .fb-like-box iframe[style], .fb-like-box span, .fb-like-box iframe span[style] { 
+	width:100% !important;
+}
 
 
 /* footer */
