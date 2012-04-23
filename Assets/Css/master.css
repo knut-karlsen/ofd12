@@ -2,6 +2,7 @@
 
  * Olavsfestdagene - css v.0.2.
  *
+ * The CSS is fully scalable with responsive design as a future possibility.
  ** Author: Knut Karlsen (knutarino@gmail.com)
  ** Last updated: 19/04.12
  
@@ -19,6 +20,7 @@ html,body {
 	font-family:Arial,Helvetica,sans-serif;
 	font-size:12px;
 	color:#333;
+	-webkit-font-smoothing:antialiased;
 }
 
 html {
@@ -32,6 +34,14 @@ body {
 #wrapper {
 	margin:0 auto;
 	width:1020px;
+}
+
+b,strong {
+	font-weight:800;
+}
+
+i,em {
+	font-style:italic;
 }
 
 
@@ -55,10 +65,15 @@ header h1 a {
 
 header h1 span {
 	position:absolute;
-	top:70px;
+	top:78px;
 	right:50px;
 	pointer-events:none;
 	text-transform:uppercase;
+	font-family:'proxima-nova',Arial,Helvetica,sans-serif;
+	font-size:20px;
+	line-height:21px;
+	color:#1d1d1b;
+	text-shadow:1px 1px 1px #ddf1fb;
 }
 
 header h1 b {
@@ -139,28 +154,41 @@ header nav a:hover {
 .full {
 	width:100%;
 	float:left;
-	background:blue;
 	position:relative;
 }
 
 .standard {
-	width:75%;
+	width:66%;
+	margin-right:2%;
 	float:left;
+	position:relative;
 }
 
 aside {
-	width:25%;
+	width:32%;
 	float:right;
+	position:relative;
+	background:blue;
 }
 
 
 /* slideshow */
+.slideshow {
+	padding-bottom:20px;
+}
+
 .slideshow > ul {
 	float:left;
-	background:green;
+	width:100%;
 }
+
+.slideshow > ul li {
+	overflow:hidden;
+}
+
 .slideshow > ul li, .slideshow .controls {
 	display:none;
+	width:inherit;
 }
 
 .slideshow > ul li:first-child, .slideshow > ul li.active {
@@ -168,17 +196,33 @@ aside {
 	position:relative;
 }
 
+.slideshow > ul li a {
+	color:#fff;
+	text-decoration:none;
+}
+
 .slideshow > ul li h3 {
+	font-size:24px;
+	line-height:30px;
+	font-weight:normal;
+	font-family:'droid-serif',Arial,Helvetica,sans-serif;
 	background:url('../Images/slide_headline_bg.png') left top repeat;
 	display:inline-block;
 	padding:10px 15px;
 	position:absolute;
 	bottom:20px;
 	left:10px;
+	margin-right:10px;
+}
+
+.ie7 .slideshow > ul li h3 {
+	zoom:1;
+	display:inline;
 }
 
 .slideshow > ul li img {
 	display:block;
+	width:100%;
 }
 
 .slideshow .previous, .slideshow .next {
@@ -206,7 +250,7 @@ aside {
 	float:left;
 	width:100%;
 	background-size:100%;
-	padding:25px 0 40px;
+	padding:10px 0 0;
 	text-align:center;
 	margin:0 auto;
 }
@@ -226,7 +270,7 @@ aside {
 	width:10px;
 	height:10px;
 	cursor:pointer;
-	margin:0 3px;
+	margin:0 5px;
 	text-indent:-9999px;
 	background:url(../Images/slide_normal.png) center no-repeat;
 	-moz-transition:all .5s;
@@ -239,6 +283,144 @@ aside {
 	background:url(../Images/slide_active.png) center no-repeat; 
 }
 
+
+/* articles */
+article figure {
+	position:relative;
+}
+
+article figure img:first-child {
+	display:block;
+	width:100%;
+}
+
+article figure .pointer {
+	display:block;
+	position:absolute;
+	bottom:-1px;
+	left:20px;
+	pointer-events:none;
+	z-index:2;
+}
+
+article figure .overlay {
+	display:none;
+}
+
+
+.colored figure {
+	margin:10px;
+}
+
+.ie7 .colored figure, .ie8 .colored figure {
+	margin:0;
+}
+
+.ie7 article figure .overlay, .ie8 article figure .overlay {
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	pointer-events:none;
+	z-index:2;
+	width:100%;
+}
+
+.colored figure img:first-child {
+	border-radius:80px;
+	-moz-border-radius:80px;
+	-webkit-border-radius:80px;
+}
+
+.colored h3 {
+	font-family:'proxima-nova',Arial,Helvetica,sans-serif;
+	font-size:15px;
+	line-height:16px;
+	font-weight:800;
+	text-align:center;
+	margin-top:5px;
+}
+
+.colored a {
+	text-decoration:none;
+	color:#454545;
+}
+
+.blue a { color:#0091d2; }
+.green a { color:#6cb580; }
+.red a { color:#ea5b56; }
+.purple a { color:#d581ad; }
+
+
+/* two-split */
+.two-split article {
+	clear:both;
+	float:left;
+	width:48.5%;
+}
+
+.two-split article.other {
+	clear:none;
+	float:right;
+}
+
+.two-split {
+	font-family:'proxima-nova',Arial,Helvetica,sans-serif;
+	color:#454545;
+}
+
+.two-split h3 a {
+	font-size:17px;
+	color:#454545;
+	text-decoration:none;
+	font-weight:800;
+	text-transform:uppercase;
+	line-height:20px;
+	display:block;
+	margin:10px 0;
+}
+
+.two-split p {
+	margin:0;
+	font-size:15px;
+	line-height:20px;
+	font-weight:400;
+	padding-bottom:25px;
+}
+
+.two-split p a {
+	font-weight:800;
+	text-transform:uppercase;
+	color:#454545;
+	text-decoration:none;
+}
+
+.two-split > a {
+	display:block;
+	font-weight:800;
+	color:#a9a794;
+	line-height:20px;
+	font-size:15px;
+	text-decoration:none;
+	border:1px solid #d5d5d5;
+	padding:8px;
+	text-align:right;
+	text-transform:uppercase;
+	clear:both;
+	margin-bottom:20px;
+}
+
+
+/* four-split */
+.four-split article {
+	float:left;
+	width:21%;
+	margin:0 2%;
+}
+
+.four-split article > a {
+	display:block;
+}
 
 
 
@@ -351,7 +533,70 @@ section li.search input[type='submit'] {
 }
 
 
+/* sidebar */
+.calendar {
+	padding:10px;
+	background:#6cb580;
+}
+
+.calendar h2, .calendar h3, .calendar h4 {
+	font-family:'proxima-nova',Arial,Helvetica,sans-serif;
+	color:#fff;
+}
+
+.calendar h2, .calendar h3 {
+	font-weight:800;
+}
+
+.calendar h2 {
+	font-size:30px;
+	text-transform:uppercase;
+	margin-bottom:10px;
+}
+
+.calendar h3 {
+	font-size:22px;
+	margin-bottom:5px;
+}
+
+.calendar h4 {
+	font-size:16px;
+	margin-bottom:10px;
+}
+
+
 /* footer */
 footer {
-	
+	margin-top:35px;
+	padding:20px 0 50px;
+	border-top:1px solid #c7c2bc;
+	width:100%;
+	float:left;
+	font-family:'proxima-nova',Arial,Helvetica,sans-serif;
+	font-size:15px;
+	line-height:20px;
+	font-weight:400;
+	color:#454545;
+}
+
+footer .info {
+	float:left;
+	width:70%;
+	margin-right:5%;
+}
+
+footer .info a {
+	color:#454545;
+	text-decoration:none;
+}
+
+footer .madeby {
+	float:right;
+	width:25%;
+}
+
+footer .madeby a {
+	color:#454545;
+	text-decoration:none;
+	font-weight:800;
 }

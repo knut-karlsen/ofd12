@@ -18,6 +18,8 @@
 <link rel="shortcut icon" href="Assets/Images/favicon.ico" />
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://use.typekit.com/mwr3aik.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 <script src="Assets/Js/jquery.klapp.slideshow.js"></script>
 <script src="Assets/Js/jquery.functions.js"></script>
@@ -56,9 +58,9 @@
 		
 			<nav>
 				<ul>
-					<li><a href="#">Hjem</a></li>
+					<li class="active"><a href="#">Hjem</a></li>
 					<li ><a href="#">Program</a></li>
-					<li class="active"><a href="#">Billetter</a></li>
+					<li><a href="#">Billetter</a></li>
 					<li><a href="#">Festivaltips</a></li>
 					<li><a href="#">Om oss</a></li>
 					<li class="search">

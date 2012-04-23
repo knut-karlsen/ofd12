@@ -28,9 +28,10 @@ function klapp_slideshow() {
 		});
 		
 		var item_height 	= $('ul:first', this).height();
-  	var item_top			= (item_height / 2) - 10;
-		$('.controls').css({'display': 'block'}).find('.previous, .next', this).css({'top': item_top, 'display': 'block'});
-
+  	var item_top			= (item_height / 2) - 25;
+		if( $('.slideshow ul:first li').length >= 2 ) {
+			$('.controls').css({'display': 'block'}).find('.previous, .next', this).css({'top': item_top, 'display': 'block'});
+		}
 	});
 
 	//transitions
@@ -84,7 +85,6 @@ function klapp_slideshow() {
   			var clicked_nr 	= $(this).attr('data-pagination');
 				var next_item		= $('li:nth-child(' + clicked_nr + ')', container);
 				var next_height	= $(next_item).outerHeight();
-				console.log(next_height);
 				
 				//checks if the same item being displayed is clicked
 				if( ! $(next_item).hasClass('active') ) {
@@ -102,19 +102,18 @@ function klapp_slideshow() {
 			
 				var slide_delay = 0;			
 				if( next_height != current_height ) {
+					slide_delay = 200;
 				  $(current_item).animate(
 				  	{	'height': next_height + 'px' },
-				  	{	'duration': 500, 
-				  		step: function() { 
-				  			$(this).css({'overflow': 'visible'});
+				  	{	'duration': slide_delay, 
+				  		step: function() {
 				  			klapp_slideshow_adjust_buttons();
 				  		},
 				  		complete: function() {
-				  			$(next_item).css({'z-index': '5', 'height': next_height + 'px'});
-				  			$(current_item).css({'z-index': '10'});
+				  			$(next_item).show().addClass('active').css({'z-index': '5', 'height': next_height + 'px'});
+				  			$(current_item).css({'z-index': '10', 'height': next_height + 'px'}); 
 				  		}
 	     	  });
-	     	  slide_delay = 500;
 				} else {
 					$(next_item).show().addClass('active').css({'z-index': '5', 'height': next_height + 'px'});
 				  $(current_item).css({'z-index': '10', 'height': next_height + 'px'}); 
@@ -150,7 +149,7 @@ function klapp_slideshow_adjust_buttons() {
 	$('.slideshow').each(function() {
 		
   		var item_height 	= $('ul:first', this).height();
-  		var item_top			= (item_height / 2) - 10;
+  		var item_top			= (item_height / 2) - 25;
 			$('.controls .previous, .controls .next', this).css({'top': item_top});
 
   });
