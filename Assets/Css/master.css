@@ -79,7 +79,7 @@ header nav, header h1 {
 }
 
 header nav {
-	background:#000;
+	background:#000 url('../Images/bg_nav.png') left top repeat;
 	padding:7px 40px;
 }
 
@@ -159,11 +159,25 @@ aside {
 	float:left;
 	background:green;
 }
-.slideshow > ul li {
+.slideshow > ul li, .slideshow .controls {
 	display:none;
 }
 
 .slideshow > ul li:first-child, .slideshow > ul li.active {
+	display:block;
+	position:relative;
+}
+
+.slideshow > ul li h3 {
+	background:url('../Images/slide_headline_bg.png') left top repeat;
+	display:inline-block;
+	padding:10px 15px;
+	position:absolute;
+	bottom:20px;
+	left:10px;
+}
+
+.slideshow > ul li img {
 	display:block;
 }
 

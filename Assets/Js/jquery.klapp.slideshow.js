@@ -20,7 +20,7 @@ function klapp_slideshow() {
 			if( i == 0 ) {
 				$(this).addClass('active');
 				$(this).parents('.slideshow').find('.controls ul').append('<li class="active" data-pagination="' + (i+1) + '">' + (i+1) + '</li>');
-				$(this).css({'top': '0px', 'left': '0px'});
+				$(this).css({'top': '0px', 'left': '0px', 'position': 'relative'});
 			} else {
 				$(this).parents('.slideshow').find('.controls ul').append('<li data-pagination="' + (i+1) + '">' + (i+1) + '</li>');
 				$(this).css({'top': '0px', 'left': '0px', 'position': 'absolute'});
@@ -29,7 +29,7 @@ function klapp_slideshow() {
 		
 		var item_height 	= $('ul:first', this).height();
   	var item_top			= (item_height / 2) - 10;
-		$('.controls .previous, .controls .next', this).css({'top': item_top, 'display': 'block'});
+		$('.controls').css({'display': 'block'}).find('.previous, .next', this).css({'top': item_top, 'display': 'block'});
 
 	});
 
@@ -84,6 +84,7 @@ function klapp_slideshow() {
   			var clicked_nr 	= $(this).attr('data-pagination');
 				var next_item		= $('li:nth-child(' + clicked_nr + ')', container);
 				var next_height	= $(next_item).outerHeight();
+				console.log(next_height);
 				
 				//checks if the same item being displayed is clicked
 				if( ! $(next_item).hasClass('active') ) {
@@ -99,6 +100,7 @@ function klapp_slideshow() {
 			//run animations
 			if( continue_show ) {
 			
+				var slide_delay = 0;			
 				if( next_height != current_height ) {
 				  $(current_item).animate(
 				  	{	'height': next_height + 'px' },
@@ -108,16 +110,17 @@ function klapp_slideshow() {
 				  			klapp_slideshow_adjust_buttons();
 				  		},
 				  		complete: function() {
-				  			$(next_item).css({'z-index': '3', 'height': next_height + 'px'});
-				  			$(current_item).css({'z-index': '2'});
+				  			$(next_item).css({'z-index': '5', 'height': next_height + 'px'});
+				  			$(current_item).css({'z-index': '10'});
 				  		}
 	     	  });
+	     	  slide_delay = 500;
 				} else {
-					$(next_item).css({'z-index': '3', 'height': next_height + 'px'});
-				  $(current_item).css({'z-index': '2', 'height': next_height + 'px'}); 
+					$(next_item).show().addClass('active').css({'z-index': '5', 'height': next_height + 'px'});
+				  $(current_item).css({'z-index': '10', 'height': next_height + 'px'}); 
 				}
 
-				$(current_item).delay(500).fadeOut(1000, function() {
+				$(current_item).delay(slide_delay).fadeOut(1000, function() {
 	
 				  $(next_item).css({'position': 'relative', 'z-index': '', 'height': ''});
 				  $(current_item).hide().removeClass('active').css({'position': 'absolute', 'height': '', 'z-index': ''});
@@ -147,7 +150,7 @@ function klapp_slideshow_adjust_buttons() {
 	$('.slideshow').each(function() {
 		
   		var item_height 	= $('ul:first', this).height();
-  		var item_top			= (item_height / 2) - 11;
+  		var item_top			= (item_height / 2) - 10;
 			$('.controls .previous, .controls .next', this).css({'top': item_top});
 
   });

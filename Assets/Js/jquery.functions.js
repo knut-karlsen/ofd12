@@ -11,7 +11,7 @@
 $(document).ready(function() {
 
 	klapp_preload([
-    __olavsfestdagene_dir__ + '/Images/slidebutton_1_active.png',
+    //__olavsfestdagene_dir__ + '/Images/slidebutton_1_active.png',
 	]);
 	
 });
