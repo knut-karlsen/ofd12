@@ -40,7 +40,7 @@
 				<p>Etter en vinter med enormt mye oppmerksomhet takket være TV-serien "Hver gang vi møtes" vil vi ha artistene ut av tv-ruta og opp på scenen. Det skjer i Borggården 2.august. <a href="#">Les mer</a></p>
 			</article>
 			
-			<article class="other">
+			<article class="odd">
 				<figure>
 					<a href="#"><img src="Assets/Images/dummy_mini.jpg" alt="" /></a>
 					<img src="Assets/Images/icon_pointer.png" alt="" class="pointer" />
@@ -58,7 +58,7 @@
 				<p>Etter en vinter med enormt mye oppmerksomhet takket være TV-serien "Hver gang vi møtes" vil vi ha artistene ut av tv-ruta og opp på scenen. Det skjer i Borggården 2.august. <a href="#">Les mer</a></p>
 			</article>
 			
-			<article class="other">
+			<article class="odd">
 				<figure>
 					<a href="#"><img src="Assets/Images/dummy_mini.jpg" alt="" /></a>
 					<img src="Assets/Images/icon_pointer.png" alt="" class="pointer" />

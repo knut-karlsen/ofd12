@@ -66,7 +66,7 @@
 				<h3><a href="#">Eggum & Sivertsen med gjester - Møtes igjen</a></h3>
 			</article>
 			
-			<article class="other">
+			<article class="odd">
 				<figure>
 					<a href="#"><img src="Assets/Images/dummy_mini.jpg" alt="" /></a>
 				</figure>
@@ -80,7 +80,7 @@
 				<h3><a href="#">Eggum & Sivertsen med gjester - Møtes igjen</a></h3>
 			</article>
 			
-			<article class="other">
+			<article class="odd">
 				<figure>
 					<a href="#"><img src="Assets/Images/dummy_mini.jpg" alt="" /></a>
 				</figure>

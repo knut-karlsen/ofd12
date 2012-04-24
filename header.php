@@ -54,7 +54,7 @@
 	<section class="content">
 		<div class="align cf">
 		
-			<nav>
+			<nav class="main">
 				<ul>
 					<li class="active"><a href="#">Hjem</a></li>
 					<li><a href="#">Program</a></li>
