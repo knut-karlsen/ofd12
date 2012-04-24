@@ -60,6 +60,4 @@
 		<div class="fb-like-box" data-href="http://www.facebook.com/olavsfest" data-width="298" data-border-color="#fff" data-show-faces="true" data-stream="false" data-header="false"></div>
 	</div>
 	
-	
-	
 </aside>

@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
 	
-	<div class="full slideshow">
+	<div class="full slideshow top">
 		<ul>
 			<li>
 				<a href="#">
@@ -30,7 +30,7 @@
 	
 	<div class="standard">
 		
-		<div class="two-split">
+		<div class="latest two-split">
 			<article>
 				<figure>
 					<a href="#"><img src="Assets/Images/dummy_mini.jpg" alt="" /></a>

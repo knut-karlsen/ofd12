@@ -9,8 +9,6 @@
 <link rel="stylesheet" type="text/css" media="screen" href="Assets/Css/events.css" />
 <link rel="alternate" title="<?php bloginfo('name'); ?> &raquo; Feed" type="application/rss+xml" href="<?php bloginfo('rss2_url'); ?>" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 <link rel="apple-touch-icon" href="Assets/Images/iphone.png" />
 <link rel="apple-touch-icon" sizes="72x72" href="Assets/Images/ipad.png" />
 <link rel="apple-touch-icon" sizes="114x114" href="Assets/Images/iphone4.png" />
@@ -39,7 +37,7 @@
 		<nav class="cf">
 			<ul>
 				<li><a href="#">Kurs</a></li>
-				<li><a href="#">Historisk marked</a></li>
+				<li class="active"><a href="#">Historisk marked</a></li>
 				<li class="language"><a href="#">English</a></li>
 			</ul>
 		</nav>
@@ -59,14 +57,14 @@
 			<nav>
 				<ul>
 					<li class="active"><a href="#">Hjem</a></li>
-					<li ><a href="#">Program</a></li>
+					<li><a href="#">Program</a></li>
 					<li><a href="#">Billetter</a></li>
 					<li><a href="#">Festivaltips</a></li>
 					<li><a href="#">Om oss</a></li>
 					<li class="search">
 						<form action="#">
 							<input name="s" type="text" onblur="if(this.value=='') this.value='Søk her...';" onfocus="if(this.value=='Søk her...') this.value='';" value="Søk her..." tabindex="1" />
-							<input type="submit" value="Søk" />
+							<input type="submit" value="Søk" tabindex="2" />
 						</form>
 					</li>
 				</ul>
