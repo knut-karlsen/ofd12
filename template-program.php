@@ -40,8 +40,8 @@
 				  <h3>Velg kategori<i></i></h3>
 				  <div>
 					  <ul>
-					  	<li>Punkt 1</li>
-					  	<li>Punkt 2</li>
+					  	<li data-event-category="punkt-1">Punkt 1</li>
+					  	<li data-event-category="punkt-2">Punkt 2</li>
 					  </ul>
 				  </div>
 				</li>
@@ -49,8 +49,8 @@
 					<h3>Velg arena<i></i></h3>
 					<div>
 						<ul>
-							<li>Punkt 1</li>
-					  	<li>Punkt 2</li>
+							<li data-event-arena="punkt-1">Punkt 1</li>
+					  	<li data-event-arena="punkt-2">Punkt 2</li>
 						</ul>
 					</div>
 				</li>
@@ -58,6 +58,93 @@
 		</div>
 	
 	
+		<div class="timeline cf">
+			
+			<div data-event-time="0800">
+				<h4>
+					<span>08:00</span>
+				</h4>
+				
+				<article class="yellow">
+					<h3>
+						<a href="#">Internasjonal pilegrimskonferanse</a>
+					</h3>
+					<p>08:30 - 12:30 Herresalen</p>
+				</article>
+				
+				<article class="odd yellow">
+					<h3>
+						<a href="#">Internasjonal pilegrimskonferanse Internasjonal pilegrimskonferanse Internasjonal pilegrimskonferanse</a>
+					</h3>
+					<p>08:30 - 12:30 Herresalen</p>
+				</article>
+				
+				<article class="yellow">
+					<h3>
+						<a href="#">Internasjonal pilegrimskonferanse</a>
+					</h3>
+					<p>08:30 - 12:30 Herresalen</p>
+				</article>
+				
+				<article class="odd yellow">
+					<h3>
+						<a href="#">Internasjonal pilegrimskonferanse</a>
+					</h3>
+					<p>08:30 - 12:30 Herresalen</p>
+				</article>
+				
+				<article class="yellow">
+					<h3>
+						<a href="#">Internasjonal pilegrimskonferanse</a>
+					</h3>
+					<p>08:30 - 12:30 Herresalen</p>
+				</article>
+				
+				<article class="odd yellow">
+					<h3>
+						<a href="#">Internasjonal pilegrimskonferanse Internasjonal pilegrimskonferanse Internasjonal pilegrimskonferanse</a>
+					</h3>
+					<p>08:30 - 12:30 Herresalen</p>
+				</article>
+			</div>
+			
+			<div data-event-time="0900">
+				<h4>
+					<span>09:00</span>
+				</h4>
+				
+				<article class="yellow">
+					<h3>
+						<a href="#">Internasjonal pilegrimskonferanse</a>
+					</h3>
+					<p>08:30 - 12:30 Herresalen</p>
+				</article>
+				
+				<article class="odd yellow">
+					<h3>
+						<a href="#">Internasjonal pilegrimskonferanse</a>
+					</h3>
+					<p>08:30 - 12:30 Herresalen</p>
+				</article>
+				
+				<article class="yellow">
+					<h3>
+						<a href="#">Internasjonal pilegrimskonferanse</a>
+					</h3>
+					<p>08:30 - 12:30 Herresalen</p>
+				</article>
+				
+				<article class="odd yellow">
+					<h3>
+						<a href="#">Internasjonal pilegrimskonferanse</a>
+					</h3>
+					<p>08:30 - 12:30 Herresalen</p>
+				</article>
+			</div>
+			
+			
+		</div>
+
 	</div>
 	
 <?php include 'footer.php'; ?>

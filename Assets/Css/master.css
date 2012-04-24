@@ -185,6 +185,14 @@ header nav a {
 	line-height:21px;
 	height:21px;
 	padding-bottom:7px;
+	transition:color .2s;
+	-moz-transition:color .2s;
+	-webkit-transition:color .2s;
+	-o-transition:color .2s;
+}
+
+header nav a:hover {
+	color:#fff;
 }
 
 header nav li.language a {
@@ -328,14 +336,6 @@ aside {
 	cursor:pointer;
 	text-indent:-9999px;
 	padding:15px;
-	transition:all .4s;
-	-moz-transition:all .4s;
-	-webkit-transition:all .4s;
-	-o-transition:all .4s;
-}
-
-.slideshow .previous:hover, .slideshow .next:hover {
-	opacity:.7;
 }
 
 .slideshow .previous { 
@@ -375,10 +375,6 @@ aside {
 	margin:0 5px;
 	text-indent:-9999px;
 	background:url(../Images/slide_normal.png) center no-repeat;
-	-moz-transition:all .5s;
-	-webkit-transition:all .5s;
-	-o-transition:all .5s;
-	transition:all .5s;
 }
 
 .slideshow .controls li.active { 
@@ -868,8 +864,12 @@ nav.main li.search input[type='submit'] {
 	float:right;
 	position:relative;
 	z-index:2;
-	top:-52px;
-	margin-bottom:-52px;
+	top:-53px;
+	margin-bottom:-53px;
+}
+
+.ie7 .program nav {
+	margin-bottom:-54px;
 }
 
 .program nav a {
@@ -887,11 +887,21 @@ nav.main li.search input[type='submit'] {
 	color:#454545;
 	text-decoration:none;
 	height:20px;
+	transition:background .4s;
+	-moz-transition:background .4s;
+	-webkit-transition:background .4s;
+	-o-transition:background .4s;
+}
+
+.program nav a:hover {
+	background:#f7f7f7;
 }
 
 .program nav a.active {
-	border-bottom:1px solid #fff;
+	border-bottom:none;
+	padding-bottom:17px;
 	color:#0091d2;
+	background:#fff;
 }
 
 .program nav a:first-child {
@@ -950,6 +960,15 @@ nav.main li.search input[type='submit'] {
 	background:#fff;
 	border:1px solid #c7c2bc;
 	display:block;
+	transition:all .4s;
+	-moz-transition:all .4s;
+	-webkit-transition:all .4s;
+	-o-transition:all .4s;
+}
+
+.options td a:hover {
+	color:#555;
+	background:#f7f7f7;
 }
 
 .options td.active a {
@@ -970,6 +989,10 @@ nav.main li.search input[type='submit'] {
 	width:50%;
 }
 
+.ie7 .options li.category, .ie7 .options li.arena {
+	width:49.9%;
+}
+
 .options ul li > div, .options li h3 {
 	margin:0 0 0 15px;
 }
@@ -985,23 +1008,37 @@ nav.main li.search input[type='submit'] {
 	background:#fff;
 	cursor:pointer;
 	font-weight:normal;
+	position:relative;
+	overflow:hidden;
+	z-index:1;
+	transition:color .4s;
+	-moz-transition:color .4s;
+	-webkit-transition:color .4s;
+	-o-transition:color .4s;
+}
+
+.options li h3:hover {
+	color:#000;
 }
 
 .options li h3 i {
 	height:40px;
-	width:40px;
-	float:right;
+	width:72px;
 	pointer-events:none;
 	display:block;
 	cursor:pointer;
+	position:absolute;
+	top:0;
+	right:0;
+	z-index:2;
 }
 
 .category h3 i {
-	background:#fccf5b url('../Images/dropdown_purple.png') center no-repeat;
+	background:url('../Images/dropdown_purple.png') right center no-repeat;
 }
 
 .arena h3 i {
-	background:#6cb580 url('../Images/dropdown_black.png') center no-repeat;
+	background:url('../Images/dropdown_black.png') right center no-repeat;
 }
 
 .options ul li > div {
@@ -1024,10 +1061,11 @@ nav.main li.search input[type='submit'] {
 	border-left:1px solid #c7c2bc;
 	border-right:1px solid #c7c2bc;
 	cursor:pointer;
-	transition:all .4s;
-	-moz-transition:all .4s;
-	-webkit-transition:all .4s;
-	-o-transition:all .4s;
+	transition:background .4s;
+	-moz-transition:background .4s;
+	-webkit-transition:background .4s;
+	-o-transition:background .4s;
+	position:relative;
 }
 
 .options ul ul > li:hover {
@@ -1036,6 +1074,52 @@ nav.main li.search input[type='submit'] {
 
 .options ul ul > li:first-child {
 	border-top:none;
+}
+
+
+/* timeline */
+.timeline {
+	margin:40px 0;
+	background:url('../Images/line_blue.png') center top repeat-y;
+}
+
+.timeline > div {
+	position:relative;
+	float:left;
+	width:100%;
+}
+
+.timeline h4 {
+	position:absolute;
+	width:12%;
+	left:44%;
+	top:0;
+	text-align:center;
+	margin:0 auto;
+	background:red;
+}
+
+.timeline h4 span {
+	display:inline-block;
+	background:#0091d2;
+	padding:5px;
+	width:60px;
+	color:#fff;
+}
+
+.ie7 .timeline h4 span {
+	display:inline;
+	zoom:1;
+}
+
+.timeline article {
+	float:left;
+	width:44%;
+	background:#f7f7f7;
+}
+
+.timeline article.odd {
+	float:right;
 }
 
 
