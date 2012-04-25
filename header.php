@@ -21,6 +21,7 @@
 
 <script src="Assets/Js/jquery.klapp.slideshow.js"></script>
 <script src="Assets/Js/jquery.functions.js"></script>
+<script src="Assets/Js/jquery.events.functions.js"></script>
 <!--[if lt IE 9]><script src="Assets/Js/html5.js"></script><![endif]-->
 
 <?php wp_head(); ?>

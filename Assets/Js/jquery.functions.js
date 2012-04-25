@@ -13,19 +13,6 @@ $(document).ready(function() {
 	klapp_preload([
     //__olavsfestdagene_dir__ + '/Images/slidebutton_1_active.png',
 	]);
-
-	$('.category h3, .arena h3').live('click', function() {
-		if( ! $(this).parent().find('div ul').hasClass('open') ) {
-			$('.category ul, .arena ul').removeClass('open').slideUp(150);
-		}
-		$(this).parent().find('div ul').addClass('open').slideToggle(150);
-	});
-
-	$(document).live('click', function(e) {
-		if( $(e.target).closest('li', this).parent().length == 0 ) {
-    	$('.category ul, .arena ul').removeClass('open').slideUp(150);
-    }
-	});
 	
 });
 

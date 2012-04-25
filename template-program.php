@@ -40,8 +40,11 @@
 				  <h3>Velg kategori<i></i></h3>
 				  <div>
 					  <ul>
-					  	<li data-event-category="punkt-1">Punkt 1</li>
-					  	<li data-event-category="punkt-2">Punkt 2</li>
+					  	<li data-event-slug="all">Alle kategorier</li>
+					  	<li data-event-slug="gudstjenester-og-pilegrimsprogram">Gudstjenester og pilegrimsprogram</li>
+					  	<li data-event-slug="klassisk">Klassisk</li>
+					  	<li data-event-slug="pop-rock-utekonserter">Pop/rock/utekonserter</li>
+					  	<li data-event-slug="jazz-world-club">Jazz/World/Club</li>
 					  </ul>
 				  </div>
 				</li>
@@ -49,8 +52,9 @@
 					<h3>Velg arena<i></i></h3>
 					<div>
 						<ul>
-							<li data-event-arena="punkt-1">Punkt 1</li>
-					  	<li data-event-arena="punkt-2">Punkt 2</li>
+							<li data-event-slug="all">Alle arenaer</li>
+							<li data-event-slug="auditorium">Auditorium</li>
+					  	<li data-event-slug="torvscenen">Torvscenen</li>
 						</ul>
 					</div>
 				</li>
@@ -60,88 +64,118 @@
 	
 		<div class="timeline cf">
 			
-			<div data-event-time="0800">
+			<div class="timecapsule" data-event-time="0800">
 				<h4>
 					<span>08:00</span>
 				</h4>
-				
-				<article class="yellow">
-					<h3>
-						<a href="#">Internasjonal pilegrimskonferanse</a>
-					</h3>
-					<p>08:30 - 12:30 Herresalen</p>
-				</article>
-				
-				<article class="odd yellow">
-					<h3>
-						<a href="#">Internasjonal pilegrimskonferanse Internasjonal pilegrimskonferanse Internasjonal pilegrimskonferanse</a>
-					</h3>
-					<p>08:30 - 12:30 Herresalen</p>
-				</article>
-				
-				<article class="yellow">
-					<h3>
-						<a href="#">Internasjonal pilegrimskonferanse</a>
-					</h3>
-					<p>08:30 - 12:30 Herresalen</p>
-				</article>
-				
-				<article class="odd yellow">
-					<h3>
-						<a href="#">Internasjonal pilegrimskonferanse</a>
-					</h3>
-					<p>08:30 - 12:30 Herresalen</p>
-				</article>
-				
-				<article class="yellow">
-					<h3>
-						<a href="#">Internasjonal pilegrimskonferanse</a>
-					</h3>
-					<p>08:30 - 12:30 Herresalen</p>
-				</article>
-				
-				<article class="odd yellow">
-					<h3>
-						<a href="#">Internasjonal pilegrimskonferanse Internasjonal pilegrimskonferanse Internasjonal pilegrimskonferanse</a>
-					</h3>
-					<p>08:30 - 12:30 Herresalen</p>
-				</article>
+				<ol>
+					<li class="purple pop-rock-utekonserter klassisk" data-event-finish="1030">
+						<a href="#">
+							<figure>
+								<img src="Assets/Images/dummy_square.jpg" alt="" />
+							</figure>
+							<i>Internasjonal pilegrimskonferanse</i>
+							<p>08:30 - 12:30 Herresalen</p>
+							<div class="stretch" style="bottom:-149px; height:150px; display:block;"></div>
+						</a>
+						<i class="pointer"></i>
+					</li>
+					<li class="odd yellow jazz-world-club klassisk torvscenen">
+						<a href="#">
+							<figure>
+								<img src="Assets/Images/dummy_square.jpg" alt="" />
+							</figure>
+							<i>Internasjonal pilegrimskonferanse</i>
+							<p>08:30 - 12:30 Herresalen</p>
+						</a>
+						<i class="pointer"></i>
+					</li>
+					<li class="green torvscenen auditorium gudstjenester-og-pilegrimsprogram">
+						<a href="#">
+							<i>Internasjonal pilegrimskonferanse</i>
+							<p>08:30 - 12:30 Herresalen</p>
+						</a>
+						<i class="pointer"></i>
+					</li>
+				</ol>
 			</div>
 			
-			<div data-event-time="0900">
+			<div class="timecapsule" data-event-time="0900">
 				<h4>
 					<span>09:00</span>
 				</h4>
-				
-				<article class="yellow">
-					<h3>
-						<a href="#">Internasjonal pilegrimskonferanse</a>
-					</h3>
-					<p>08:30 - 12:30 Herresalen</p>
-				</article>
-				
-				<article class="odd yellow">
-					<h3>
-						<a href="#">Internasjonal pilegrimskonferanse</a>
-					</h3>
-					<p>08:30 - 12:30 Herresalen</p>
-				</article>
-				
-				<article class="yellow">
-					<h3>
-						<a href="#">Internasjonal pilegrimskonferanse</a>
-					</h3>
-					<p>08:30 - 12:30 Herresalen</p>
-				</article>
-				
-				<article class="odd yellow">
-					<h3>
-						<a href="#">Internasjonal pilegrimskonferanse</a>
-					</h3>
-					<p>08:30 - 12:30 Herresalen</p>
-				</article>
+				<ol>
+					<li class="red auditorium torvscenen gudstjenester-og-pilegrimsprogram">
+						<a href="#">
+							<i>Internasjonal pilegrimskonferanse</i>
+							<p>08:30 - 12:30 Herresalen</p>
+						</a>
+						<i class="pointer"></i>
+					</li>
+					<li class="odd blue">
+						<a href="#">
+							<i>Internasjonal pilegrimskonferanse</i>
+							<p>08:30 - 12:30 Herresalen</p>
+						</a>
+						<i class="pointer"></i>
+					</li>
+					<li class="grey auditorium">
+						<a href="#">
+							<i>Internasjonal pilegrimskonferanse</i>
+							<p>08:30 - 12:30 Herresalen</p>
+						</a>
+						<i class="pointer"></i>
+					</li>
+				</ol>
 			</div>
 			
+			<div class="timecapsule empty" data-event-time="1000">
+				<h4>
+					<span>10:00</span>
+				</h4>
+			</div>
+			
+			<div class="timecapsule empty" data-event-time="1100">
+				<h4>
+					<span>11:00</span>
+				</h4>
+			</div>
+			
+			<div class="timecapsule" data-event-time="1200">
+				<h4>
+					<span>12:00</span>
+				</h4>
+				<ol>
+					<li class="purple" data-event-finish="1030">
+						<a href="#">
+							<figure>
+								<img src="Assets/Images/dummy_square.jpg" alt="" />
+							</figure>
+							<i>Internasjonal pilegrimskonferanse</i>
+							<p>08:30 - 12:30 Herresalen</p>
+							<div class="stretch"></div>
+						</a>
+						<i class="pointer"></i>
+					</li>
+					<li class="odd yellow">
+						<a href="#">
+							<figure>
+								<img src="Assets/Images/dummy_square.jpg" alt="" />
+							</figure>
+							<i>Internasjonal pilegrimskonferanse</i>
+							<p>08:30 - 12:30 Herresalen</p>
+						</a>
+						<i class="pointer"></i>
+					</li>
+					<li class="green">
+						<a href="#">
+							<i>Internasjonal pilegrimskonferanse</i>
+							<p>08:30 - 12:30 Herresalen</p>
+						</a>
+						<i class="pointer"></i>
+					</li>
+				</ol>
+			</div>
 			
 		</div>
 
