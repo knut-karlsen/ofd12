@@ -375,6 +375,7 @@ aside {
 	margin:0 5px;
 	text-indent:-9999px;
 	background:url(../Images/slide_normal.png) center no-repeat;
+	display:none;
 }
 
 .slideshow .controls li.active { 
