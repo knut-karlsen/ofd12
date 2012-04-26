@@ -69,7 +69,7 @@
 					<span>08:00</span>
 				</h4>
 				<ol>
-					<li class="purple pop-rock-utekonserter klassisk" data-event-finish="1030">
+					<li class="purple pop-rock-utekonserter klassisk torvscenen" data-event-finish="1030">
 						<a href="#">
 							<figure>
 								<img src="Assets/Images/dummy_square.jpg" alt="" />
@@ -80,7 +80,7 @@
 						</a>
 						<i class="pointer"></i>
 					</li>
-					<li class="odd yellow jazz-world-club klassisk torvscenen">
+					<li class="odd yellow jazz-world-club torvscenen">
 						<a href="#">
 							<figure>
 								<img src="Assets/Images/dummy_square.jpg" alt="" />
@@ -90,7 +90,7 @@
 						</a>
 						<i class="pointer"></i>
 					</li>
-					<li class="green torvscenen auditorium gudstjenester-og-pilegrimsprogram">
+					<li class="green auditorium gudstjenester-og-pilegrimsprogram">
 						<a href="#">
 							<i>Internasjonal pilegrimskonferanse</i>
 							<p>08:30 - 12:30 Herresalen</p>
@@ -105,7 +105,7 @@
 					<span>09:00</span>
 				</h4>
 				<ol>
-					<li class="red auditorium torvscenen gudstjenester-og-pilegrimsprogram">
+					<li class="red auditorium gudstjenester-og-pilegrimsprogram">
 						<a href="#">
 							<i>Internasjonal pilegrimskonferanse</i>
 							<p>08:30 - 12:30 Herresalen</p>

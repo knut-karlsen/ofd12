@@ -8,7 +8,7 @@
  
 *****************************************************************************************/
 $(document).ready(function() {
-	
+
 	//open and close category/arena dropdowns
 	$('.category h3, .arena h3').live('click', function() {
 		if( ! $(this).parent().find('div ul').hasClass('open') ) {
@@ -16,6 +16,7 @@ $(document).ready(function() {
 		}
 		$(this).parent().find('div ul').addClass('open').slideToggle(150);
 	});
+
 	
 	//close dropdown on outside click
 	$(document).live('click', function(e) {
@@ -24,23 +25,15 @@ $(document).ready(function() {
     }
 	});
 	
-	//close dropdown on li-click
+	//close dropdown on li-click and activate filtering
 	$('.category li, .arena li').live('click', function() {
 		$(this).parent().removeClass('open').slideToggle(150);
 		$(this).parents().closest('li').find('h3').html( $(this).text() + '<i></i>' );
+		if( ! $(this).hasClass('active') ) {
+			klapp_filter_events( $(this) );
+		}
 	});
-	
-	//activate timeline
-	$('.timeline ol').filterprojects({
-		animationSpeed: 0,
-		animationPulse: 0,
-		show: { width: 'show' },
-		hide: { width: 'hide' },
-		filterTagSelector: [ '.category li', '.arena li' ]
-	});
-	
-	
-	
+
 });
 
 

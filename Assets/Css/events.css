@@ -301,10 +301,10 @@
 	position:relative;
 	display:block;
 	text-decoration:none;
-	transition:all .4s;
-	-moz-transition:all .4s;
-	-webkit-transition:all .4s;
-	-o-transition:all .4s;
+	transition:margin .4s;
+	-moz-transition:margin .4s;
+	-webkit-transition:margin .4s;
+	-o-transition:margin .4s;
 }
 
 .timecapsule li > a:before, .timecapsule li > a:after{content:'';display:table;}.timecapsule li > a:after{clear:both;}.ie7 .timecapsule li > a{zoom:1;}
