@@ -1,4 +1,29 @@
 <?php include 'header.php'; ?>
+
+<?php 
+	
+	/*
+		INFO: 
+			Legg til slutt-tidspunkt på liste-elementet til hvert arrangement som HAR et slutt-tidspunkt, ikke til resten. 
+			Rund også av tidspunktet til disse, kun hele timer! Ala: <li data-event-finish="1100"> … </li>
+			I tillegg til et slutt-tidspunkt, må du mate inn en egen div (<div class="stretch"></div>) for arrangement med slutt-tidspunkt. Det skal se slik ut:
+			<li class="purple pop-rock-utekonserter klassisk torvscenen" data-event-finish="1030">
+			  <a href="#">
+			  	<figure>
+			  		<img src="Assets/Images/dummy_square.jpg" alt="" />
+			  	</figure>
+			  	<i>Internasjonal pilegrimskonferanse</i>
+			  	<p>08:30 - 12:30 Herresalen</p>
+			  	<div class="stretch"></div>
+			  </a>
+			  <i class="pointer"></i>
+			</li>
+			
+			Kategorier, arenaer og farge på boksen mates inn som en vanlig class til liste-elementet.
+		- 
+	*/
+	
+?>
 	
 	<div class="full top shadow program">
 
@@ -62,121 +87,208 @@
 		</div>
 	
 	
-		<div class="timeline cf">
+		<div class="timeline">
+			<div class="maintain">
 			
-			<div class="timecapsule" data-event-time="0800">
-				<h4>
-					<span>08:00</span>
-				</h4>
-				<ol>
-					<li class="purple pop-rock-utekonserter klassisk torvscenen" data-event-finish="1030">
-						<a href="#">
-							<figure>
-								<img src="Assets/Images/dummy_square.jpg" alt="" />
-							</figure>
-							<i>Internasjonal pilegrimskonferanse</i>
-							<p>08:30 - 12:30 Herresalen</p>
-							<div class="stretch" style="bottom:-149px; height:150px; display:block;"></div>
-						</a>
-						<i class="pointer"></i>
-					</li>
-					<li class="odd yellow jazz-world-club torvscenen">
-						<a href="#">
-							<figure>
-								<img src="Assets/Images/dummy_square.jpg" alt="" />
-							</figure>
-							<i>Internasjonal pilegrimskonferanse</i>
-							<p>08:30 - 12:30 Herresalen</p>
-						</a>
-						<i class="pointer"></i>
-					</li>
-					<li class="green auditorium gudstjenester-og-pilegrimsprogram">
-						<a href="#">
-							<i>Internasjonal pilegrimskonferanse</i>
-							<p>08:30 - 12:30 Herresalen</p>
-						</a>
-						<i class="pointer"></i>
-					</li>
-				</ol>
+				<div class="timecapsule" data-event-time="0800">
+					<h4>
+						<span>08:00</span>
+					</h4>
+					<ol>
+						<li class="purple pop-rock-utekonserter klassisk" data-event-finish="1200">
+							<a href="#">
+								<figure>
+									<img src="Assets/Images/dummy_square.jpg" alt="" />
+								</figure>
+								<i>Internasjonal pilegrimskonferanse</i>
+								<p>08:30 - 12:30 Herresalen</p>
+								<div class="stretch"></div>
+							</a>
+							<i class="pointer"></i>
+						</li>
+						<li class="odd yellow jazz-world-club" data-event-finish="1500">
+							<a href="#">
+								<figure>
+									<img src="Assets/Images/dummy_square.jpg" alt="" />
+								</figure>
+								<i>Internasjonal pilegrimskonferanse</i>
+								<p>08:30 - 12:30 Herresalen</p>
+								<div class="stretch"></div>
+							</a>
+							<i class="pointer"></i>
+						</li>
+						<li class="green auditorium gudstjenester-og-pilegrimsprogram">
+							<a href="#">
+								<i>Internasjonal pilegrimskonferanse</i>
+								<p>08:30 - 12:30 Herresalen</p>
+							</a>
+							<i class="pointer"></i>
+						</li>
+					</ol>
+				</div>
+				
+				<div class="timecapsule" data-event-time="0900">
+					<h4>
+						<span>09:00</span>
+					</h4>
+					<ol>
+						<li class="red auditorium gudstjenester-og-pilegrimsprogram">
+							<a href="#">
+								<i>Internasjonal pilegrimskonferanse</i>
+								<p>08:30 - 12:30 Herresalen</p>
+							</a>
+							<i class="pointer"></i>
+						</li>
+						<li class="odd blue">
+							<a href="#">
+								<i>Internasjonal pilegrimskonferanse</i>
+								<p>08:30 - 12:30 Herresalen</p>
+							</a>
+							<i class="pointer"></i>
+						</li>
+						<li class="grey auditorium">
+							<a href="#">
+								<i>Internasjonal pilegrimskonferanse</i>
+								<p>08:30 - 12:30 Herresalen</p>
+							</a>
+							<i class="pointer"></i>
+						</li>
+					</ol>
+				</div>
+				
+				<div class="timecapsule empty" data-event-time="1000">
+					<h4>
+						<span>10:00</span>
+					</h4>
+				</div>
+				
+				<div class="timecapsule empty" data-event-time="1100">
+					<h4>
+						<span>11:00</span>
+					</h4>
+				</div>
+				
+				<div class="timecapsule" data-event-time="1200">
+					<h4>
+						<span>12:00</span>
+					</h4>
+					<ol>
+						<li class="purple">
+							<a href="#">
+								<figure>
+									<img src="Assets/Images/dummy_square.jpg" alt="" />
+								</figure>
+								<i>Internasjonal pilegrimskonferanse</i>
+								<p>08:30 - 12:30 Herresalen</p>
+								<div class="stretch"></div>
+							</a>
+							<i class="pointer"></i>
+						</li>
+						<li class="odd yellow">
+							<a href="#">
+								<figure>
+									<img src="Assets/Images/dummy_square.jpg" alt="" />
+								</figure>
+								<i>Internasjonal pilegrimskonferanse</i>
+								<p>08:30 - 12:30 Herresalen</p>
+							</a>
+							<i class="pointer"></i>
+						</li>
+						<li class="green">
+							<a href="#">
+								<i>Internasjonal pilegrimskonferanse</i>
+								<p>08:30 - 12:30 Herresalen</p>
+							</a>
+							<i class="pointer"></i>
+						</li>
+					</ol>
+				</div>
+				
+				<div class="timecapsule empty" data-event-time="1300">
+					<h4>
+						<span>13:00</span>
+					</h4>
+				</div>
+				
+				<div class="timecapsule empty" data-event-time="1400">
+					<h4>
+						<span>14:00</span>
+					</h4>
+				</div>
+				
+				<div class="timecapsule empty" data-event-time="1500">
+					<h4>
+						<span>15:00</span>
+					</h4>
+				</div>
+				
+				<div class="timecapsule empty" data-event-time="1600">
+					<h4>
+						<span>16:00</span>
+					</h4>
+				</div>
+				
+				<div class="timecapsule empty" data-event-time="1700">
+					<h4>
+						<span>17:00</span>
+					</h4>
+				</div>
+				
+				<div class="timecapsule empty" data-event-time="1800">
+					<h4>
+						<span>18:00</span>
+					</h4>
+				</div>
+				
+				<div class="timecapsule empty" data-event-time="1900">
+					<h4>
+						<span>19:00</span>
+					</h4>
+				</div>
+				
+				<div class="timecapsule" data-event-time="2000">
+					<h4>
+						<span>20:00</span>
+					</h4>
+					<ol>
+						<li class="yellow torvscenen">
+							<a href="#">
+								<figure>
+									<img src="Assets/Images/dummy_square.jpg" alt="" />
+								</figure>
+								<i>Internasjonal pilegrimskonferanse</i>
+								<p>08:30 - 12:30 Herresalen</p>
+							</a>
+							<i class="pointer"></i>
+						</li>
+					</ol>
+				</div>
+				
+				<div class="timecapsule empty" data-event-time="2100">
+					<h4>
+						<span>21:00</span>
+					</h4>
+				</div>
+				
+				<div class="timecapsule empty" data-event-time="2200">
+					<h4>
+						<span>22:00</span>
+					</h4>
+				</div>
+				
+				<div class="timecapsule empty" data-event-time="2300">
+					<h4>
+						<span>23:00</span>
+					</h4>
+				</div>
+				
+				<div class="timecapsule empty" data-event-time="2400">
+					<h4>
+						<span>24:00</span>
+					</h4>
+				</div>
+			
 			</div>
-			
-			<div class="timecapsule" data-event-time="0900">
-				<h4>
-					<span>09:00</span>
-				</h4>
-				<ol>
-					<li class="red auditorium gudstjenester-og-pilegrimsprogram">
-						<a href="#">
-							<i>Internasjonal pilegrimskonferanse</i>
-							<p>08:30 - 12:30 Herresalen</p>
-						</a>
-						<i class="pointer"></i>
-					</li>
-					<li class="odd blue">
-						<a href="#">
-							<i>Internasjonal pilegrimskonferanse</i>
-							<p>08:30 - 12:30 Herresalen</p>
-						</a>
-						<i class="pointer"></i>
-					</li>
-					<li class="grey auditorium">
-						<a href="#">
-							<i>Internasjonal pilegrimskonferanse</i>
-							<p>08:30 - 12:30 Herresalen</p>
-						</a>
-						<i class="pointer"></i>
-					</li>
-				</ol>
-			</div>
-			
-			<div class="timecapsule empty" data-event-time="1000">
-				<h4>
-					<span>10:00</span>
-				</h4>
-			</div>
-			
-			<div class="timecapsule empty" data-event-time="1100">
-				<h4>
-					<span>11:00</span>
-				</h4>
-			</div>
-			
-			<div class="timecapsule" data-event-time="1200">
-				<h4>
-					<span>12:00</span>
-				</h4>
-				<ol>
-					<li class="purple" data-event-finish="1030">
-						<a href="#">
-							<figure>
-								<img src="Assets/Images/dummy_square.jpg" alt="" />
-							</figure>
-							<i>Internasjonal pilegrimskonferanse</i>
-							<p>08:30 - 12:30 Herresalen</p>
-							<div class="stretch"></div>
-						</a>
-						<i class="pointer"></i>
-					</li>
-					<li class="odd yellow">
-						<a href="#">
-							<figure>
-								<img src="Assets/Images/dummy_square.jpg" alt="" />
-							</figure>
-							<i>Internasjonal pilegrimskonferanse</i>
-							<p>08:30 - 12:30 Herresalen</p>
-						</a>
-						<i class="pointer"></i>
-					</li>
-					<li class="green">
-						<a href="#">
-							<i>Internasjonal pilegrimskonferanse</i>
-							<p>08:30 - 12:30 Herresalen</p>
-						</a>
-						<i class="pointer"></i>
-					</li>
-				</ol>
-			</div>
-			
 		</div>
 
 	</div>

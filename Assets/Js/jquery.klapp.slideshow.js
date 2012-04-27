@@ -6,7 +6,7 @@
  * Automatically adjusts to changes in width/height (great for responsive websites).
  * Adds class 'active' to the current slide.
  ** Author: Knut Karlsen (knutarino@gmail.com)
- ** Last updated: 26/04.12
+ ** Last updated: 27/04.12
  
 *****************************************************************************************/
 
@@ -30,7 +30,11 @@ function klapp_slideshow() {
 		var item_height 	= $('ul:first', this).height();
   	var item_top			= (item_height / 2) - 35;
 		if( $('.slideshow ul:first li').length >= 2 ) {
-			$('.controls').slideDown(300).find('.previous, .next', this).css({'top': item_top}).fadeIn(500).parent().find('ul li').fadeIn(1000);
+			if( $('body').hasClass('ie7') || $('body').hasClass('ie8') ) {
+				$('.controls').slideDown(300).find('.previous, .next', this).css({'top': item_top, 'display': 'block'}).parent().find('ul li').css({'display': 'block'});
+			} else {
+				$('.controls').slideDown(300).find('.previous, .next', this).css({'top': item_top}).fadeIn(500).parent().find('ul li').fadeIn(1000);
+			}
 		}
 	});
 

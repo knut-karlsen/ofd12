@@ -64,7 +64,7 @@
 
 .options {
 	position:relative;
-	z-index:1;
+	z-index:9999;
 	background:#fff;
 	border:1px solid #c7c2bc;
 	padding:15px;
@@ -200,6 +200,7 @@
 
 .options ul li > div {
 	position:relative;
+	z-index:999;
 }
 
 .options ul ul {
@@ -208,7 +209,6 @@
 	border-bottom:3px solid #c7c2bc;
 	background:#fff;
 	display:none;
-	z-index:99;
 }
 
 .options ul ul > li {
@@ -236,8 +236,18 @@
 
 /* timeline */
 .timeline {
+	position:relative;
+	overflow:hidden;
 	margin:40px 0;
+	padding:0 10px;
+	left:-10px;
+	float:left;
+	width:100%;
 	background:url('../Images/line_blue.png') center top repeat-y;
+}
+
+.timeline .maintain {
+	position:relative;
 }
 
 .timecapsule {
@@ -249,6 +259,7 @@
 
 .timecapsule.empty {
 	height:35px;
+	pointer-events:none;
 }
 
 .timecapsule:first-child h4 {
@@ -256,6 +267,7 @@
 }
 
 .timecapsule h4 {
+	pointer-events:none;
 	position:absolute;
 	width:12%;
 	left:44%;
@@ -288,6 +300,7 @@
 	position:relative;
 	margin-bottom:5px;
 	text-align:right;
+	z-index:150;
 }
 
 .timecapsule li.odd {
