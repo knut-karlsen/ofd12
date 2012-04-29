@@ -106,7 +106,7 @@
 							</a>
 							<i class="pointer"></i>
 						</li>
-						<li class="odd yellow jazz-world-club" data-event-finish="1500">
+						<li class="odd yellow jazz-world-club" data-event-finish="1200">
 							<a href="#">
 								<figure>
 									<img src="Assets/Images/dummy_square.jpg" alt="" />
@@ -121,6 +121,14 @@
 							<a href="#">
 								<i>Internasjonal pilegrimskonferanse</i>
 								<p>08:30 - 12:30 Herresalen</p>
+							</a>
+							<i class="pointer"></i>
+						</li>
+						<li class="odd green auditorium gudstjenester-og-pilegrimsprogram" data-event-finish="1200">
+							<a href="#">
+								<i>Internasjonal pilegrimskonferanse</i>
+								<p>08:30 - 12:30 Herresalen</p>
+								<div class="stretch"></div>
 							</a>
 							<i class="pointer"></i>
 						</li>
@@ -146,20 +154,45 @@
 							</a>
 							<i class="pointer"></i>
 						</li>
-						<li class="grey auditorium">
+						<li class="grey auditorium" data-event-finish="1200">
 							<a href="#">
 								<i>Internasjonal pilegrimskonferanse</i>
 								<p>08:30 - 12:30 Herresalen</p>
+								<div class="stretch"></div>
 							</a>
 							<i class="pointer"></i>
 						</li>
 					</ol>
 				</div>
 				
-				<div class="timecapsule empty" data-event-time="1000">
+				<div class="timecapsule" data-event-time="1000">
 					<h4>
 						<span>10:00</span>
 					</h4>
+					<ol>
+						<li class="red auditorium gudstjenester-og-pilegrimsprogram">
+							<a href="#">
+								<i>Internasjonal pilegrimskonferanse</i>
+								<p>08:30 - 12:30 Herresalen</p>
+							</a>
+							<i class="pointer"></i>
+						</li>
+						<li class="odd blue">
+							<a href="#">
+								<i>Internasjonal pilegrimskonferanse</i>
+								<p>08:30 - 12:30 Herresalen</p>
+							</a>
+							<i class="pointer"></i>
+						</li>
+						<li class="grey auditorium" data-event-finish="1200">
+							<a href="#">
+								<i>Internasjonal pilegrimskonferanse</i>
+								<p>08:30 - 12:30 Herresalen</p>
+								<div class="stretch"></div>
+							</a>
+							<i class="pointer"></i>
+						</li>
+					</ol>
 				</div>
 				
 				<div class="timecapsule empty" data-event-time="1100">
@@ -173,7 +206,7 @@
 						<span>12:00</span>
 					</h4>
 					<ol>
-						<li class="purple">
+						<li class="purple" data-event-finish="1800">
 							<a href="#">
 								<figure>
 									<img src="Assets/Images/dummy_square.jpg" alt="" />

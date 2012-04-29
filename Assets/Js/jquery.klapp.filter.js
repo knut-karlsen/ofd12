@@ -2,6 +2,7 @@
 
  * Klapp - filter events v.0.1.
  *
+ * Got a little short on time, had to do a few shortcuts. But it works perfectly.
  * tl;dr lotsa loops, ifs and butts.
  ** Author: Knut Karlsen (knutarino@gmail.com)
  ** Last updated: 27/04.12
@@ -11,10 +12,10 @@
 function klapp_filter_events( clicked_list_element ) {
 	
 	var events						= $('.timeline ol');
-	var events_li					= $('li', events);
+	var all_events				= $('li', events);
 	var filters						= [ 'li.category', 'li.arena' ];
-	var invisible_events	= $('li', events).filter(':hidden').size();
-	var all_events				= $('li', events).size();
+	var count_invisible		= $('li', events).filter(':hidden').size();
+	var count_events			= $('li', events).size();
 	var clicked_filter		= $(clicked_list_element).attr('data-event-slug');
 	var keep_hiding				= true;
 	var active_filters		=	[];
@@ -34,66 +35,101 @@ function klapp_filter_events( clicked_list_element ) {
 			}
 		});
 	});
-
-	//find active events
-	if( active_filters.length > 0 ) {	
 	
-		var active_filters 	= active_filters.join('');
+	$(events).parent().removeClass('hide').find('ol').children().removeClass('odd');
+	if( active_filters.length > 0 ) {	
+		
+		//tagging filtered events and calculating capsule height
+		var active_filters = active_filters.join('');
 		var i = 0;
-		var o = 0;
 		$(events).each(function() {
 			var x = 0;
+			var capsule_even_height = 0;
+			var capsule_odd_height	= 0;
 			$('li', this).each(function() {
 				if( $(this).is(active_filters) ) {
-					$(this).removeClass('odd');
 					if( x % 2) {
 						$(this).addClass('odd');
+						capsule_odd_height = capsule_odd_height + parseInt( $(this).attr('data-element-height') ) + 5;
+					} else {
+						capsule_even_height = capsule_even_height + parseInt( $(this).attr('data-element-height') ) + 5;
 					}
 					active_events[i] = $(this);
-					i++; x++;	
+					i++; x++;
 				}
 			});
+			if( x == 0 ) {
+				$(this).parent().addClass('hide').attr('data-element-height', '35');
+			}
+			if( ! $(this).parents('.timecapsule').hasClass('hide') ) {
+				if( capsule_odd_height > capsule_even_height) {
+					$(this).parents('.timecapsule').attr('data-element-height', capsule_odd_height);
+				}	 else {
+					$(this).parents('.timecapsule').attr('data-element-height', capsule_even_height);
+				}
+			}
 		});
 		
 	} else {
 		
+		//tagging all events
 		var i = 0;
 		$(events).each(function() {
 			var x = 0;
+			var capsule_even_height = 0;
+			var capsule_odd_height	= 0;
 			$('li', this).each(function() {
-				$(this).removeClass('odd');
 				if( x % 2) {
 					$(this).addClass('odd');
+					capsule_odd_height = capsule_odd_height + parseInt( $(this).attr('data-element-height') ) + 5;
+				} else {
+					capsule_even_height = capsule_even_height + parseInt( $(this).attr('data-element-height') ) + 5;
 				}
 				active_events[i] = $(this);
 				i++; x++;	
 			});
+			if( ! $(this).parents('.timecapsule').hasClass('hide') ) {
+				if( capsule_odd_height > capsule_even_height) {
+					$(this).parents('.timecapsule').attr('data-element-height', capsule_odd_height);
+				}	 else {
+					$(this).parents('.timecapsule').attr('data-element-height', capsule_even_height);
+				}
+			}
 		});
 
 	}
-	
-	events_li.not(active_filters).each(function(i, item){
-		console.log( $(this) );
-	});
 
+	
+	
+	
+	
+	all_events.not(active_filters).each(function(i, item){
+		//console.log( $(this) );
+	});
+	
 	//show and hide
-	if( (active_events.length != all_events) || (active_events.length == all_events && invisible_events > 0) ) {
+	if( (active_events.length != count_events) || (active_events.length == count_events && count_invisible > 0) ) {
 		
 		$('.maintain').css({'margin-top': '0'});
-		$('.stretch').css({'height': '5px'});
 		$('li', events).hide();
 		$.each(active_events, function(i) {
 			$(this).animate({
 				'height': 'toggle', 
 				'opacity': 'toggle'
-			}, 500);
+			},
+			{
+				step: function(now, fx) {
+					klapp_expand_events();
+				}
+			}, 1500);
 		});
+		klapp_expand_events();
 		
 		//loops until all animation is complete, then expands the relevant events and begins timeline at the right time
 		var klapp_expand_delay = setInterval(function() {
 			if( ! $('li', events).is(':animated') ) {
 				clearInterval(klapp_expand_delay);
-				klapp_expand_events();
+				//klapp_expand_events();
 				klapp_timeline_startpoint();
 			}
 		}, 5);
@@ -113,7 +149,7 @@ function klapp_timeline_startpoint() {
 			var container_margin = $(this).position();
 			$('.maintain').animate({
 				'margin-top': '-' + container_margin.top + 'px'
-			}, 500);	
+			}, 500);
 			return false;
 	  }
 	});
@@ -127,21 +163,57 @@ function klapp_expand_events() {
 	$('.timeline ol').each(function() {
 		$('li', this).each(function() {
 			var event_finish = $(this).attr('data-event-finish');
-			if( event_finish != undefined && event_finish != false ) {	
-				var event_height 	= $(this).height();
-				var event_stretch = $(this).find('.stretch');
-				var event_offset 	= $(this).parents('.timecapsule').position();
+			if( event_finish != undefined && event_finish != false ) {
+
+				var capsule_offset 		= 0;
+				var event_height 			= $(this).attr('data-element-height');
+				var event_stretch 		= $(this).find('.stretch');
+				var previous_capsules = $(this).parents('.timecapsule').prevAll();
+				//get capsule offset
+				if( previous_capsules != undefined && previous_capsules != false ) {
+					$.each(previous_capsules, function(i, item) {
+						capsule_offset = capsule_offset + parseInt( $(item).attr('data-element-height') );
+					});
+				}
+				
+				//get event offset
+				var previous_events = $(this).prevAll();
+				var event_type_odd	= false;
+				var event_offset		= 0;
+				if( previous_events != undefined && previous_events != false ) {
+					if( $(this).hasClass('odd') ) {
+						event_type_odd = true;
+					}
+					$.each(previous_events, function(i, item) {
+						if(	event_type_odd && $(item).is('.odd') ) {
+							event_offset = event_offset + parseInt( $(item).attr('data-element-height') );
+						} else if ( ! event_type_odd && $(item).is('.odd:not') ) {
+							event_offset = event_offset + parseInt( $(item).attr('data-element-height') );
+						}
+					});
+				}
+				if(event_offset > 0) {
+					event_offset = event_offset + 5;
+				}
+				
+				//calculate and set stretch height
 				$('.timecapsule').each(function() {
 					var event_time = $(this).attr('data-event-time');
 					if( event_time == event_finish ) {
-						var timecapsule_margin = 20; 
-						if( ! $(this).hasClass('empty') ) {
-							timecapsule_margin = 30;
+						var timecapsule_margin = 17; 
+						if( ! $(this).hasClass('empty') && ! $(this).hasClass('hide') ) {
+							timecapsule_margin = 27;
 						}
-						var stretch_offset = $(this).position();
-						var stretch_height = (stretch_offset.top - event_height + timecapsule_margin + 4) - event_offset.top;
-						var stretch_top = event_height - 5;
-						$(event_stretch).css({'display': 'block', 'top': stretch_top + 'px'}).animate({'height': stretch_height + 'px'}, 500);
+						var previous_capsules 	= $(this).prevAll();
+						var event_total_height 	= 0;
+						if( previous_capsules != undefined && previous_capsules != false ) {
+							$.each(previous_capsules, function(i, item) {
+								event_total_height = event_total_height + parseInt( $(item).attr('data-element-height') );
+							});
+						}
+						var stretch_height = event_total_height - (capsule_offset + event_offset + 1 - timecapsule_margin);
+						$(event_stretch).css({'height': '5px', 'display': 'block', 'top': '0px'}).animate({'height': stretch_height + 'px'}, 1500);
+						return false;
 					}
 				});
 			}

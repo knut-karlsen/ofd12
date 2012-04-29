@@ -254,12 +254,7 @@
 	position:relative;
 	float:left;
 	width:100%;
-	min-height:35px;
-}
-
-.timecapsule.empty {
-	height:35px;
-	pointer-events:none;
+	min-height:47px;
 }
 
 .timecapsule:first-child h4 {
@@ -273,12 +268,16 @@
 	left:44%;
 	top:0;
 	text-align:center;
-	padding-top:12px;
+	padding:12px 0 0;
 	margin:0 auto;
 }
 
-.timecapsule.empty h4 {
-	padding-top:0;
+.timecapsule.empty h4, .timecapsule.hide h4 {
+	padding:0;
+}
+
+.timecapsule.empty, .timecapsule.hide {
+	min-height:35px;
 }
 
 .timecapsule h4 span {
@@ -328,7 +327,7 @@
 }
 
 .timecapsule li > a:hover {
-	margin-left:-10px;
+	margin-right:-25px;
 }
 
 .timecapsule li.odd > a:hover {
@@ -349,6 +348,11 @@
 .timecapsule .odd .pointer {
 	left:0;
 	right:auto;
+}
+
+.timecapsule figure, .timecapsule i, .timecapsule p {
+	position:relative;
+	z-index:200;
 }
 
 .timecapsule i {

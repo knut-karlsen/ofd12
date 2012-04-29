@@ -33,8 +33,20 @@ $(document).ready(function() {
 			klapp_filter_events( $(this) );
 		}
 	});
+
+});
+
+$(window).load(function() {
+
+	//calculate and set height of timeline-elements
+	$('.timecapsule').each(function() {
+		$(this).attr('data-element-height', $(this).height());
+		$('li', this).each(function() {
+			$(this).attr('data-element-height', $(this).height());
+		});
+	});
 	
-	//expand long events
+	//expand events
 	klapp_expand_events();
 
 });
