@@ -6,7 +6,7 @@
 		INFO: 
 			Legg til slutt-tidspunkt på liste-elementet til hvert arrangement som HAR et slutt-tidspunkt, ikke til resten. 
 			Rund også av tidspunktet til disse, kun hele timer! Ala: <li data-event-finish="1100"> … </li>
-			I tillegg til et slutt-tidspunkt, må du mate inn en egen div (<div class="stretch"></div>) for arrangement med slutt-tidspunkt. Det skal se slik ut:
+			Logikken skal se slik ut:
 			<li class="purple pop-rock-utekonserter klassisk torvscenen" data-event-finish="1030">
 			  <a href="#">
 			  	<figure>
@@ -14,13 +14,12 @@
 			  	</figure>
 			  	<i>Internasjonal pilegrimskonferanse</i>
 			  	<p>08:30 - 12:30 Herresalen</p>
-			  	<div class="stretch"></div>
 			  </a>
 			  <i class="pointer"></i>
 			</li>
 			
 			Kategorier, arenaer og farge på boksen mates inn som en vanlig class til liste-elementet.
-		- 
+			Annethvert liste-element skal ha class "odd".
 	*/
 	
 ?>
@@ -102,7 +101,6 @@
 								</figure>
 								<i>Internasjonal pilegrimskonferanse</i>
 								<p>08:30 - 12:30 Herresalen</p>
-								<div class="stretch"></div>
 							</a>
 							<i class="pointer"></i>
 						</li>
@@ -113,7 +111,6 @@
 								</figure>
 								<i>Internasjonal pilegrimskonferanse</i>
 								<p>08:30 - 12:30 Herresalen</p>
-								<div class="stretch"></div>
 							</a>
 							<i class="pointer"></i>
 						</li>
@@ -128,7 +125,6 @@
 							<a href="#">
 								<i>Internasjonal pilegrimskonferanse</i>
 								<p>08:30 - 12:30 Herresalen</p>
-								<div class="stretch"></div>
 							</a>
 							<i class="pointer"></i>
 						</li>
@@ -158,7 +154,6 @@
 							<a href="#">
 								<i>Internasjonal pilegrimskonferanse</i>
 								<p>08:30 - 12:30 Herresalen</p>
-								<div class="stretch"></div>
 							</a>
 							<i class="pointer"></i>
 						</li>
@@ -188,7 +183,6 @@
 							<a href="#">
 								<i>Internasjonal pilegrimskonferanse</i>
 								<p>08:30 - 12:30 Herresalen</p>
-								<div class="stretch"></div>
 							</a>
 							<i class="pointer"></i>
 						</li>
@@ -213,7 +207,6 @@
 								</figure>
 								<i>Internasjonal pilegrimskonferanse</i>
 								<p>08:30 - 12:30 Herresalen</p>
-								<div class="stretch"></div>
 							</a>
 							<i class="pointer"></i>
 						</li>
