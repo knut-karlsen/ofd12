@@ -99,10 +99,7 @@ function klapp_filter_events( clicked_list_element ) {
 
 	}
 
-	
-	
-	
-	
+
 	all_events.not(active_filters).each(function(i, item){
 		//console.log( $(this) );
 	});
@@ -113,18 +110,23 @@ function klapp_filter_events( clicked_list_element ) {
 		$('.maintain').css({'margin-top': '0'});
 		$('li', events).hide();
 		$.each(active_events, function(i) {
-			$(this).animate({
-				'height': 'toggle', 
-				'opacity': 'toggle'
-			},
-			{
-				step: function(now, fx) {
-					klapp_expand_events();
-				}
-			}, 1500);
+			
+			var event_finish = $(this).attr('data-event-finish');
+			if( event_finish != undefined && event_finish != false ) {
+
+				$(this).klapp_expand_event();
+				
+			} else {
+				
+				$(this).animate({
+					'height': 'toggle', 
+					'opacity': 'toggle'
+				}, 500);
+				
+			}
+			
 		});
-		klapp_expand_events();
-		
+
 		//loops until all animation is complete, then expands the relevant events and begins timeline at the right time
 		var klapp_expand_delay = setInterval(function() {
 			if( ! $('li', events).is(':animated') ) {
@@ -157,14 +159,92 @@ function klapp_timeline_startpoint() {
 }
 
 
+
+//expand events that have a definite ending
+(function($) {
+  $.fn.klapp_expand_event = function() {
+		
+		$(this).find('.stretch').remove();
+		$('a', this).append('<div class="stretch"></div>');
+		
+		var current_event			= $(this);
+		var capsule_offset 		= 0;
+		var event_finish 			= $(this).attr('data-event-finish');
+		var event_height 			= $(this).attr('data-element-height');
+		var event_stretch 		= $(this).find('.stretch');
+		var previous_capsules = $(this).parents('.timecapsule').prevAll();
+		
+		
+		
+		//get capsule offset
+		if( previous_capsules != undefined && previous_capsules != false ) {
+		  $.each(previous_capsules, function(i, item) {
+		  	capsule_offset = capsule_offset + parseInt( $(item).attr('data-element-height') );
+		  });
+		}
+		
+		//get event offset
+		var previous_events = $(this).prevAll();
+		var event_type_odd	= false;
+		var event_offset		= 0;
+		if( previous_events != undefined && previous_events != false ) {
+		  if( $(this).hasClass('odd') ) {
+		  	event_type_odd = true;
+		  }
+		  $.each(previous_events, function(i, item) {
+		  	if(	event_type_odd && $(item).is('.odd') ) {
+		  		event_offset = event_offset + parseInt( $(item).attr('data-element-height') );
+		  	} else if ( ! event_type_odd && $(item).is('.odd:not') ) {
+		  		event_offset = event_offset + parseInt( $(item).attr('data-element-height') );
+		  	}
+		  });
+		}
+		if(event_offset > 0) {
+		  event_offset = event_offset + 5;
+		}
+		
+		//calculate and set stretch height
+		$('.timecapsule').each(function() {
+		  var event_time = $(this).attr('data-event-time');
+		  if( event_time == event_finish ) {
+		  	var timecapsule_margin = 17; 
+		  	if( ! $(this).hasClass('empty') && ! $(this).hasClass('hide') ) {
+		  		timecapsule_margin = 27;
+		  	}
+		  	var previous_capsules 	= $(this).prevAll();
+		  	var event_total_height 	= 0;
+		  	if( previous_capsules != undefined && previous_capsules != false ) {
+		  		$.each(previous_capsules, function(i, item) {
+		  			event_total_height = event_total_height + parseInt( $(item).attr('data-element-height') );
+		  		});
+		  	}
+		  	var stretch_height = event_total_height - (capsule_offset + event_offset + 1 - timecapsule_margin);
+		  	$(event_stretch).css({'height': '0px', 'top': '0px'});
+		  	$(current_event).slideDown(500).find('a').css({'background': 'none', 'border-left': 'none', 'border-right': 'none', 'border-bottom': 'none'});
+				$(event_stretch).animate({
+					'height': stretch_height + 'px', 
+					'opacity': 'toggle'
+				}, 1500);
+		  	return false;
+		  }
+		});
+
+  };
+})(jQuery);
+
+
+
+
 //expand events that have a definite ending
 function klapp_expand_events() {
-
+	
 	$('.timeline ol').each(function() {
 		$('li', this).each(function() {
 			var event_finish = $(this).attr('data-event-finish');
 			if( event_finish != undefined && event_finish != false ) {
-
+					
+				$('<div class="stretch"></div>').appendTo('a', this);
+				
 				var capsule_offset 		= 0;
 				var event_height 			= $(this).attr('data-element-height');
 				var event_stretch 		= $(this).find('.stretch');
@@ -212,7 +292,7 @@ function klapp_expand_events() {
 							});
 						}
 						var stretch_height = event_total_height - (capsule_offset + event_offset + 1 - timecapsule_margin);
-						$(event_stretch).css({'height': '5px', 'display': 'block', 'top': '0px'}).animate({'height': stretch_height + 'px'}, 1500);
+						$(event_stretch).css({'height': '5px', 'display': 'block', 'top': '0px'}).animate({'height': stretch_height + 'px'}, 1000);
 						return false;
 					}
 				});

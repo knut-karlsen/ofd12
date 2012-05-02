@@ -47,6 +47,6 @@ $(window).load(function() {
 	});
 	
 	//expand events
-	klapp_expand_events();
+	//klapp_expand_events();
 
 });
