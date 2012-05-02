@@ -201,7 +201,7 @@ function klapp_timeline_startpoint() {
 				//show and hide
 				$(current_event).show().find('article, .pointer').hide();
 				$(current_event).find('article').animate({ height: 'toggle', opacity: 'toggle' }, { duration: 500, queue: false });
-    		$(current_event).find('.pointer').animate({ height: 'toggle' }, { duration: 150, queue: false });
+    		$(current_event).find('.pointer').animate({ height: 'toggle', opacity: 'toggle' }, { duration: 200, queue: false });
     		$(event_stretch).animate({ height: stretch_height, opacity: '1' }, { duration: 500, queue: false });
 		  	return false;
 		  }
