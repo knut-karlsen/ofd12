@@ -4,7 +4,7 @@
  *
  * Events specific setup and functions.
  ** Author: Knut Karlsen (knutarino@gmail.com)
- ** Last updated: 19/04.12
+ ** Last updated: 02/05.12
  
 *****************************************************************************************/
 $(document).ready(function() {
@@ -16,7 +16,6 @@ $(document).ready(function() {
 		}
 		$(this).parent().find('div ul').addClass('open').slideToggle(150);
 	});
-
 	
 	//close dropdown on outside click
 	$(document).live('click', function(e) {
@@ -38,17 +37,23 @@ $(document).ready(function() {
 	//animate event on hover
 	$('.timeline li a').hover(function() {
 		if( $(this).parent().hasClass('odd') ) {
-			$(this).animate({'marginRight': '-10px'}, { queue: false, duration: 200 });
+			$(this).animate({'margin-right': '-10px'}, { queue: false, duration: 200 });
 		} else {
-			$(this).animate({'marginLeft': '-10px'}, { queue: false, duration: 200 });
+			$(this).animate({'margin-left': '-10px'}, { queue: false, duration: 200 });
 		}
 	}, function() {
 		if( $(this).parent().hasClass('odd') ) {
-			$(this).animate({'marginRight': '0px', 'marginLeft': '11px'}, { queue: false, duration: 200 });
+			$(this).animate({'margin-right': '0px', 'margin-left': '11px'}, { queue: false, duration: 200 });
 		} else {
-			$(this).animate({'marginLeft': '0px'}, { queue: false, duration: 200 });
+			$(this).animate({'margin-left': '0px'}, { queue: false, duration: 200 });
 		}
 	});
+	
+	//ie7 fix
+	if( $('body').hasClass('ie7') ) {
+		function ie_fix(){return true;}
+		window.onerror = ie_fix;
+	}
 
 });
 
