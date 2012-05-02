@@ -69,7 +69,7 @@
 			<a href="#">Flere nyheter i arkivet »</a>
 		</div>
 		
-		<div class="four-split colored">
+		<div class="four-split highlighted">
 			<article class="blue">
 				<a href="#">
 				<figure>
