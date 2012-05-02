@@ -39,7 +39,6 @@
 <script src="http://use.typekit.com/mwr3aik.js"></script>
 <script src="Assets/Js/jquery.functions.js"></script>
 <script src="Assets/Js/jquery.events.functions.js"></script>
-<script src="Assets/Js/jquery.klapp.filter.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
 <!--[if lt IE 9]><script src="Assets/Js/html5.js"></script><![endif]-->
 

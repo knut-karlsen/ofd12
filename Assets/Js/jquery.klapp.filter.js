@@ -2,15 +2,15 @@
 
  * Klapp - filter events v.0.1.
  *
- * Got a little short on time, had to do a few shortcuts. But it works perfectly.
+ * Got a little short on time, had to do a few shortcuts. But it should work pretty sweet.
  * tl;dr lotsa loops, ifs and butts.
  ** Author: Knut Karlsen (knutarino@gmail.com)
- ** Last updated: 27/04.12
+ ** Last updated: 02/05.12
  
 *****************************************************************************************/
 
 function klapp_filter_events( clicked_list_element ) {
-	
+
 	var events						= $('.timeline ol');
 	var all_events				= $('li', events);
 	var filters						= [ 'li.category', 'li.arena' ];
@@ -98,48 +98,26 @@ function klapp_filter_events( clicked_list_element ) {
 		});
 
 	}
-
-
-	all_events.not(active_filters).each(function(i, item){
-		//console.log( $(this) );
-	});
 	
 	//show and hide
-	if( (active_events.length != count_events) || (active_events.length == count_events && count_invisible > 0) ) {
-		
+	if( (active_events.length != count_events) || (active_events.length == count_events && count_invisible > 0) ) {	
 		$('.maintain').css({'margin-top': '0'});
 		$('li', events).hide();
 		$.each(active_events, function(i) {
-			
 			var event_finish = $(this).attr('data-event-finish');
 			if( event_finish != undefined && event_finish != false ) {
 
 				$(this).klapp_expand_event();
-				
+
 			} else {
-				
-				$(this).animate({
-					'height': 'toggle', 
-					'opacity': 'toggle'
-				}, 500);
-				
+
+				$(this).animate({ 'height': 'toggle', 'opacity': 'toggle' }, 500);
+
 			}
-			
 		});
-
-		//loops until all animation is complete, then expands the relevant events and begins timeline at the right time
-		var klapp_expand_delay = setInterval(function() {
-			if( ! $('li', events).is(':animated') ) {
-				clearInterval(klapp_expand_delay);
-				//klapp_expand_events();
-				klapp_timeline_startpoint();
-			}
-		}, 5);
-
+		klapp_timeline_startpoint();
 	}
-	
-	
-	
+
 }
 
 
@@ -160,29 +138,27 @@ function klapp_timeline_startpoint() {
 
 
 
-//expand events that have a definite ending
+//expand event that has a definite ending
 (function($) {
   $.fn.klapp_expand_event = function() {
-		
+
 		$(this).find('.stretch').remove();
 		$('a', this).append('<div class="stretch"></div>');
-		
+
 		var current_event			= $(this);
 		var capsule_offset 		= 0;
 		var event_finish 			= $(this).attr('data-event-finish');
 		var event_height 			= $(this).attr('data-element-height');
 		var event_stretch 		= $(this).find('.stretch');
 		var previous_capsules = $(this).parents('.timecapsule').prevAll();
-		
-		
-		
+
 		//get capsule offset
 		if( previous_capsules != undefined && previous_capsules != false ) {
 		  $.each(previous_capsules, function(i, item) {
 		  	capsule_offset = capsule_offset + parseInt( $(item).attr('data-element-height') );
 		  });
 		}
-		
+
 		//get event offset
 		var previous_events = $(this).prevAll();
 		var event_type_odd	= false;
@@ -219,12 +195,14 @@ function klapp_timeline_startpoint() {
 		  		});
 		  	}
 		  	var stretch_height = event_total_height - (capsule_offset + event_offset + 1 - timecapsule_margin);
-		  	$(event_stretch).css({'height': '0px', 'top': '0px'});
-		  	$(current_event).slideDown(500).find('a').css({'background': 'none', 'border-left': 'none', 'border-right': 'none', 'border-bottom': 'none'});
-				$(event_stretch).animate({
-					'height': stretch_height + 'px', 
-					'opacity': 'toggle'
-				}, 1500);
+		  	$(event_stretch).css({'height': '5px', 'top': '-1px', 'display': 'block'});
+		  	$(current_event).find('a').css({'background': 'none', 'border': '1px solid transparent'});
+
+				//show and hide
+				$(current_event).show().find('article, .pointer').hide();
+				$(current_event).find('article').animate({ height: 'toggle', opacity: 'toggle' }, { duration: 500, queue: false });
+    		$(current_event).find('.pointer').animate({ height: 'toggle' }, { duration: 150, queue: false });
+    		$(event_stretch).animate({ height: stretch_height, opacity: '1' }, { duration: 500, queue: false });
 		  	return false;
 		  }
 		});
@@ -235,15 +213,15 @@ function klapp_timeline_startpoint() {
 
 
 
-//expand events that have a definite ending
-function klapp_expand_events() {
+//expand events that have a definite ending onload
+function klapp_expand_events_onload() {
 	
 	$('.timeline ol').each(function() {
 		$('li', this).each(function() {
 			var event_finish = $(this).attr('data-event-finish');
 			if( event_finish != undefined && event_finish != false ) {
 					
-				$('<div class="stretch"></div>').appendTo('a', this);
+				$('a', this).append('<div class="stretch onload"></div>');
 				
 				var capsule_offset 		= 0;
 				var event_height 			= $(this).attr('data-element-height');
@@ -292,7 +270,7 @@ function klapp_expand_events() {
 							});
 						}
 						var stretch_height = event_total_height - (capsule_offset + event_offset + 1 - timecapsule_margin);
-						$(event_stretch).css({'height': '5px', 'display': 'block', 'top': '0px'}).animate({'height': stretch_height + 'px'}, 1000);
+						$(event_stretch).css({'height': event_height, 'display': 'block', 'top': '0px'}).animate({'height': stretch_height + 'px'}, 1000);
 						return false;
 					}
 				});
