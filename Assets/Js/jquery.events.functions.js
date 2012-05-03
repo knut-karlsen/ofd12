@@ -48,6 +48,29 @@ $(document).ready(function() {
 			$(this).animate({'margin-left': '0px'}, { queue: false, duration: 200 });
 		}
 	});
+
+	//animate singular dates under event-article
+	$('.module.event ol li').live('click', function() {
+		var event_time = $(this).attr('data-event-time');
+		if( ! $(this).hasClass('active') && ! $('.module.event > div').is(':animated') ) {
+		
+			$('.module.event ol').children().removeClass('active');
+			$(this).addClass('active');
+
+			$('.module.event > div').each(function() {
+				if( event_time == $(this).attr('data-event-time') ) {
+					$('.module.event > div.active').removeClass('active').hide();
+					$(this).fadeIn(400, function() {
+						$(this).addClass('active');
+					});
+					return false;
+				}
+			});
+			
+			
+			
+		}
+	});
 	
 	//ie7 fix
 	if( $('body').hasClass('ie7') ) {
