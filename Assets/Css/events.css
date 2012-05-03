@@ -316,15 +316,18 @@
 
 .timecapsule li {
 	float:left;
+	clear:left;
 	width:44%;
 	position:relative;
 	margin-bottom:5px;
 	text-align:right;
 	z-index:150;
+	display:block;
 }
 
 .timecapsule li.odd {
 	float:right;
+	clear:right;
 	text-align:left;
 }
 

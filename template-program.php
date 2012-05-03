@@ -100,7 +100,7 @@
 									<figure>
 										<img src="Assets/Images/dummy_square.jpg" alt="" />
 									</figure>
-									<i>Internasjonal pilegrimskonferanse</i>
+									<i>Internasjonal pilegrimskonferanse og veldig lang tittel</i>
 									<p>08:30 - 12:30 Herresalen</p>
 								</article>
 							</a>

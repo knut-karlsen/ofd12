@@ -62,12 +62,15 @@
 			<div class="do-not-touch"></div>
 		</div>
 		
-		<div class="first-row one-split compact">
+		<div class="first-row one-split compact green cf">
 			<article>
 				<figure>
 					<a href="#"><img src="Assets/Images/dummy2.jpg" alt="" /></a>
 				</figure>
-				<h3><a href="#">Eggum & Sivertsen med gjester - Møtes igjen</a></h3>
+				<h2><a href="#">Eggum & Sivertsen med gjester - Møtes igjen</a></h2>
+				<h3>Borggården</h3>
+				<p>Inngang kr. 450,- (ordinær)</p>
+				
 			</article>
 		</div>
 		

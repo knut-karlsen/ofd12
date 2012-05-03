@@ -53,7 +53,6 @@ $(document).ready(function() {
 	$('.module.event ol li').live('click', function() {
 		var event_time = $(this).attr('data-event-time');
 		if( ! $(this).hasClass('active') && ! $('.module.event > div').is(':animated') ) {
-		
 			$('.module.event ol').children().removeClass('active');
 			$(this).addClass('active');
 
@@ -66,9 +65,6 @@ $(document).ready(function() {
 					return false;
 				}
 			});
-			
-			
-			
 		}
 	});
 	

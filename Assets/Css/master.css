@@ -392,6 +392,7 @@ article {
 	font-size:18px;
 	line-height:26px;
 	color:#333;
+	overflow:hidden;
 }
 
 article p.preamble {
@@ -548,10 +549,73 @@ article figure .overlay {
 .grey a { color:#83816f; }
 
 
-/* two-split */
+
+
+/* splits */
 .two-split, .four-split {
 	float:left;
 	width:100%;
+}
+
+.one-split {
+	border:1px solid #c7c2bc;
+	background:#fff;
+	margin:3% 0;
+	overflow:hidden;
+}
+
+.one-split.blue h3 { color:#0091d2; }
+.one-split.green h3 { color:#6cb580; }
+.one-split.red h3 { color:#ea5b56; }
+.one-split.purple h3 { color:#d581ad; }
+.one-split.yellow h3 { color:#fccf5b; }
+.one-split.grey h3 { color:#83816f; }
+
+.one-split figure {
+	float:left;
+	width:48.5%;
+	margin-right:3%;
+}
+
+.one-split h2, .one-split h3, .one-split p {
+	margin-left:52%;
+}
+
+.one-split h2 {
+	margin-top:20px;
+	margin-bottom:20px;
+	margin-right:3%;
+}
+
+.one-split h2 a {
+	color:#454545;
+	font-size:40px;
+	line-height:42px;
+	font-family:'droid-serif',serif;
+	font-style:italic;
+	font-weight:normal;
+	transition:color .4s;
+	-moz-transition:color .4s;
+	-webkit-transition:color .4s;
+	-o-transition:color .4s;
+}
+
+.one-split h2 a:hover {
+	text-decoration:none;
+	color:#333;
+}
+
+.one-split h3 {
+	text-transform:uppercase;
+	font-size:18px;
+	margin-bottom:0;
+}
+
+.one-split p {
+	font-size:18px;
+	font-weight:800;
+	color:#454545;
+	margin-bottom:20px;
 }
 
 .two-split > article, .two-split > li {
@@ -639,8 +703,6 @@ article figure .overlay {
 	margin-bottom:20px;
 }
 
-
-/* four-split */
 .four-split > article, .four-split > li {
 	float:left;
 	width:22.75%;
