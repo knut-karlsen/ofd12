@@ -34,8 +34,7 @@ html {
 #wrapper {
 	margin:0 auto;
 	min-width:960px;
-	/* max-width:1020px; */
-	max-width:1200px;
+	max-width:1020px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -537,6 +536,11 @@ article figure .overlay {
 	margin-top:5px;
 }
 
+.ie7 .highlighted h3 {
+	position:relative;
+	z-index:99;
+}
+
 .highlighted a {
 	text-decoration:none;
 	color:#454545;
@@ -703,6 +707,10 @@ a.one-split {
 	margin:0 3% 3% 0;
 }
 
+.ie7 .four-split > article, .ie7 .four-split > li { 
+	width:22.68%;
+}
+
 .four-split > article.last, .four-split > li.last {
 	margin-right:0;
 }
@@ -783,6 +791,10 @@ a.one-split {
 	float:left;
 	width:21%;
 	margin:0 2%;
+}
+
+.ie7 .four-split.highlighted article {
+	width:20.8%;
 }
 
 .four-split article > a {
