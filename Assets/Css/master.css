@@ -1043,6 +1043,36 @@ nav.main li.search input[type='submit'] {
 	color:#fff;
 }
 
+.module.green {
+	background:#6cb580;
+	border:none;
+	color:#fff;
+}
+
+.module.red {
+	background:#ea5b56;
+	border:none;
+	color:#fff;
+}
+
+.module.purple {
+	background:#d581ad;
+	border:none;
+	color:#fff;
+}
+
+.module.yellow {
+	background:#fccf5b;
+	border:none;
+	color:#fff;
+}
+
+.module.grey {
+	background:#83816f;
+	border:none;
+	color:#fff;
+}
+
 .facebook {
 	border:1px solid #999;
 	background:#fff;
@@ -1054,20 +1084,58 @@ nav.main li.search input[type='submit'] {
 }
 
 /* event sidebar */
+.module p, .module blockquote {
+	padding-bottom:10px;
+}
+
+.module p a {
+	color:#0091d2;
+	text-decoration:underline;
+}
+
+.module ul, .module ol {
+	padding:0 14px 20px 60px;
+}
+
+.module.blue p a, .module.red p a, .module.yellow p a, .module.purple p a, .module.green p a, .module.grey p a {
+	color:#fff;
+}
+
+.module li {
+	padding-bottom:4px;
+}
+
+.module ul {
+	list-style:disc outside none;
+}
+
+.module ol {
+	list-style:decimal outside none;
+}
+
+.module.event ol.dates, .module.event ul.tickets {
+	list-style:none;
+	padding:0;
+}
+
+.module p a:hover {
+	text-decoration:none;
+}
+
 .module.event {
 	border:1px solid #ea5b56;
 	background:#ea5b56;
 	padding:0;
 }
 
-.module.event ol {
+.module.event ol.dates {
 	padding:10px;
 	margin:0;
 	font-size:13px;
 	line-height:16px;
 }
 
-.module.event ol li {
+.module.event ol.dates li {
 	padding:8px;
 	text-align:center;
 	font-weight:bold;
@@ -1081,21 +1149,21 @@ nav.main li.search input[type='submit'] {
 	-o-transition:background .4s;
 }
 
-.ie7 .module.event ol li {
+.ie7 .module.event ol.dates li {
 	display:inline;
 	zoom:1;
 }
 
-.module.event ol li:hover {
+.module.event ol.dates li:hover {
 	background:#ba231d;
 }
 
-.module.event ol li.active {
+.module.event ol.dates li.active {
 	background:#fff;
 	color:#ea5b56;
 }
 
-.module.event h3 {
+.module.event h3.datetime {
 	color:#fff;
 	font-size:32px;
 	line-height:32px;
@@ -1104,13 +1172,13 @@ nav.main li.search input[type='submit'] {
 	margin:0;
 }
 
-.module.event h3 i {
+.module.event h3.datetime i {
 	font-style:normal;
 	display:block;
 }
 
 .module.event .info { 
-	padding:10px;
+	padding:10px 10px 0 10px;
 	background:#fff;
 }
 
@@ -1122,14 +1190,14 @@ nav.main li.search input[type='submit'] {
 	display:block;
 }
 
-.module.event ul {
+.module.event ul.tickets {
 	background:#fbeee8;
 	font-size:18px;
 	line-height:20px;
 	color:#333;
 }
 
-.module.event ul li {
+.module.event ul.tickets li {
 	border-top:1px solid #ea5b56;
 	border-right:1px solid #ea5b56;
 	padding:7px 10px;
@@ -1137,7 +1205,7 @@ nav.main li.search input[type='submit'] {
 	position:relative;
 }
 
-.module.event ul li b {
+.module.event ul.tickets li b {
 	border-top:1px solid #ea5b56;
 	position:absolute;
 	top:-1px;
@@ -1173,7 +1241,7 @@ nav.main li.search input[type='submit'] {
 	margin-bottom:40px;
 }
 
-aside h5 {
+.share h5, .flickr h5 {
 	color:#333;
 	text-transform:uppercase;
 }
@@ -1257,7 +1325,6 @@ footer .madeby a {
 }
 
 /* search */
-
 .searchbox {
 	float:left;
 	width:100%;

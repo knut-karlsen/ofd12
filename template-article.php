@@ -103,9 +103,9 @@
 			<li data-event-time="3007-1700">30/07<br/>17:00</li>
 		</ol>
 		<div class="active" data-event-time="2807-1500">
-			<h3>28. juli<i>kl 15:00</i></h3>
+			<h3 class="datetime">28. juli<i>kl 15:00</i></h3>
 			<div class="info">
-				<p>blablablal</p>
+				<p>Phasellus risus augue, convallis vel <b>pharetra molestie, egestas eu nulla</b>. Aliquam erat volutpat. Vestibulum.</p>
 			</div>
 			<ul class="tickets">
 				<li>Student <b>300,-</b></li>
@@ -115,7 +115,7 @@
 			<a href="#" class="buy-tickets">Kjøp billett</a>
 		</div>
 		<div data-event-time="2907-1900">
-			<h3>29. juli<i>kl 19:00</i></h3>
+			<h3 class="datetime">29. juli<i>kl 19:00</i></h3>
 			<div class="info">
 				<p>infostuffs...</p>
 			</div>
@@ -125,7 +125,7 @@
 			<a href="#" class="buy-tickets">Kjøp billett</a>
 		</div>
 		<div data-event-time="3007-1700">
-			<h3>30. juli<i>kl 17:00</i></h3>
+			<h3 class="datetime">30. juli<i>kl 17:00</i></h3>
 			<div class="info">
 				<p>osvosovsv</p>
 			</div>
