@@ -1288,6 +1288,10 @@ a.twitter-share {
 	padding:0;
 }
 
+.ie7 .flickr li {
+	width:24.9%;
+}
+
 .flickr a {
 	display:block;
 	padding:0 3px 3px 0;
