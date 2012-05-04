@@ -1,6 +1,8 @@
 <?php include_once 'wordpress-functions.php' ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 <!-- .......................................................................................................
 ............................................................................................................
 ................................................. made by ..................................................
@@ -13,7 +15,6 @@
 ............................................................................................................
 ........................................................................................................ -->	
 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Olavsfestdagene 2012</title>
 
 <meta name="description" content="Velkommen til de 50. Olavsfestdagene i Trondheim, 28. juli - 05. august 2012" />
@@ -38,7 +39,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="http://use.typekit.com/mwr3aik.js"></script>
 <script src="Assets/Js/jquery.functions.min.js"></script>
-<script src="Assets/Js/jquery.events.functions.js"></script>
+<script src="Assets/Js/jquery.events.functions.min.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
 <!--[if lt IE 9]><script src="Assets/Js/html5.js"></script><![endif]-->
 

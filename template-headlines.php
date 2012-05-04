@@ -62,119 +62,168 @@
 			<div class="do-not-touch"></div>
 		</div>
 		
-		<div class="first-row one-split compact green cf">
+		<a href="#" class="first-row one-split compact green cf">
 			<article>
 				<figure>
-					<a href="#"><img src="Assets/Images/dummy2.jpg" alt="" /></a>
+					<img src="Assets/Images/dummy_headline_1.jpg" alt="" />
 				</figure>
-				<h2><a href="#">Eggum & Sivertsen med gjester - Møtes igjen</a></h2>
-				<h3>Borggården</h3>
-				<p>Inngang kr. 450,- (ordinær)</p>
-				
+				<h2>Eggum & Sivertsen med gjester - Møtes igjen</h2>
+				<p>
+					<b>Borggården</b>
+					Inngang kr. 450,- (ordinær)
+				</p>
 			</article>
-		</div>
+		</a>
 		
-		<ol class="second-row two-split compact dark">
-			<li>
+		<ul class="second-row two-split compact dark">
+			<li class="blue">
 				<article>
 					<figure>
-						<a href="#"><img src="Assets/Images/dummy.jpg" alt="" /></a>
+						<a href="#"><img src="Assets/Images/dummy_headline_2.jpg" alt="" /></a>
 					</figure>
-					<h3><a href="#">Eggum & Sivertsen med gjester - Møtes igjen</a></h3>
+					<h3><a href="#">Eggum & Sivertsen med gjester - Møtes igjen ved et hjørne på Sinsen</a></h3>
+					<p>
+						<b>Borggården</b>
+						<b>Inngang kr. 450 (ordinær)</b>
+					</p>
 				</article>
 			</li>
-			<li class="odd">
+			<li class="odd blue">
 				<article>
 					<figure>
-						<a href="#"><img src="Assets/Images/dummy3.jpg" alt="" /></a>
+						<a href="#"><img src="Assets/Images/dummy_headline_4.jpg" alt="" /></a>
 					</figure>
 					<h3><a href="#">Eggum & Sivertsen med gjester - Møtes igjen</a></h3>
+					<p>
+						<b>Borggården</b>
+						<b>Inngang kr. 450 (ordinær)</b>
+					</p>
 				</article>
 			</li>
-			<li>
+			<li class="green">
 				<article>
 					<figure>
-						<a href="#"><img src="Assets/Images/dummy2.jpg" alt="" /></a>
+						<a href="#"><img src="Assets/Images/dummy_headline_3.jpg" alt="" /></a>
 					</figure>
-					<h3><a href="#">Eggum & Sivertsen med gjester - Møtes igjen</a></h3>
+					<h3><a href="#">Eggum & Sivertsen med gjester</a></h3>
+					<p>
+						<b>Borggården</b>
+						<b>Inngang kr. 450 (ordinær)</b>
+					</p>
 				</article>
 			</li>
-			<li class="odd">
+			<li class="odd yellow">
 				<article>
 					<figure>
-						<a href="#"><img src="Assets/Images/dummy.jpg" alt="" /></a>
+						<a href="#"><img src="Assets/Images/dummy_headline_1.jpg" alt="" /></a>
 					</figure>
 					<h3><a href="#">Eggum & Sivertsen med gjester - Møtes igjen</a></h3>
+					<p>
+						<b>Borggården</b>
+						<b>Inngang kr. 450 (ordinær)</b>
+					</p>
 				</article>
 			</li>
-		</ol>
+		</ul>
 
-		<ol class="third-row four-split compact dark">
-			<li>
+		<ul class="third-row four-split compact dark">
+			<li class="blue">
 				<article>
 					<figure>
-						<a href="#"><img src="Assets/Images/dummy3.jpg" alt="" /></a>
+						<a href="#"><img src="Assets/Images/dummy_headline_1.jpg" alt="" /></a>
 					</figure>
 					<h3><a href="#">Eggum & Sivertsen med gjester - Møtes igjen</a></h3>
+					<p>
+						<b>Borggården</b>
+						<b>Inngang kr. 450 (ordinær)</b>
+					</p>
 				</article>
 			</li>
-			<li>
+			<li class="green">
 				<article>
 					<figure>
-						<a href="#"><img src="Assets/Images/dummy2.jpg" alt="" /></a>
+						<a href="#"><img src="Assets/Images/dummy_headline_4.jpg" alt="" /></a>
 					</figure>
-					<h3><a href="#">Eggum & Sivertsen med gjester - Møtes igjen</a></h3>
+					<h3><a href="#">Eggum & Sivertsen med gjester</a></h3>
+					<p>
+						<b>Borggården</b>
+						<b>Inngang kr. 450 (ordinær)</b>
+					</p>
 				</article>
 			</li>
-			<li>
+			<li class="red">
 				<article>
 					<figure>
-						<a href="#"><img src="Assets/Images/dummy.jpg" alt="" /></a>
+						<a href="#"><img src="Assets/Images/dummy_headline_2.jpg" alt="" /></a>
 					</figure>
-					<h3><a href="#">Eggum & Sivertsen med gjester - Møtes igjen</a></h3>
+					<h3><a href="#">Eggum & Sivertsen med gjester</a></h3>
+					<p>
+						<b>Borggården</b>
+						<b>Inngang kr. 450 (ordinær)</b>
+					</p>
 				</article>
 			</li>
-			<li class="last">
+			<li class="last purple">
 				<article>
 					<figure>
-						<a href="#"><img src="Assets/Images/dummy3.jpg" alt="" /></a>
+						<a href="#"><img src="Assets/Images/dummy_headline_3.jpg" alt="" /></a>
 					</figure>
 					<h3><a href="#">Eggum & Sivertsen med gjester - Møtes igjen</a></h3>
+					<p>
+						<b>Borggården</b>
+						<b>Inngang kr. 450 (ordinær)</b>
+					</p>
 				</article>
 			</li>
-			<li>
+			<li class="yellow">
 				<article>
 					<figure>
-						<a href="#"><img src="Assets/Images/dummy.jpg" alt="" /></a>
+						<a href="#"><img src="Assets/Images/dummy_headline_2.jpg" alt="" /></a>
 					</figure>
 					<h3><a href="#">Eggum & Sivertsen med gjester - Møtes igjen</a></h3>
+					<p>
+						<b>Borggården</b>
+						<b>Inngang kr. 450 (ordinær)</b>
+					</p>
 				</article>
 			</li>
-			<li>
+			<li class="blue">
 				<article>
 					<figure>
-						<a href="#"><img src="Assets/Images/dummy2.jpg" alt="" /></a>
+						<a href="#"><img src="Assets/Images/dummy_headline_3.jpg" alt="" /></a>
 					</figure>
 					<h3><a href="#">Eggum & Sivertsen med gjester - Møtes igjen</a></h3>
+					<p>
+						<b>Borggården</b>
+						<b>Inngang kr. 450 (ordinær)</b>
+					</p>
 				</article>
 			</li>
-			<li>
+			<li class="blue">
 				<article>
 					<figure>
-						<a href="#"><img src="Assets/Images/dummy3.jpg" alt="" /></a>
+						<a href="#"><img src="Assets/Images/dummy_headline_1.jpg" alt="" /></a>
 					</figure>
 					<h3><a href="#">Eggum & Sivertsen med gjester - Møtes igjen</a></h3>
+					<p>
+						<b>Borggården</b>
+						<b>Inngang kr. 450 (ordinær)</b>
+					</p>
 				</article>
 			</li>
-			<li class="last">
+			<li class="last yellow">
 				<article>
 					<figure>
-						<a href="#"><img src="Assets/Images/dummy2.jpg" alt="" /></a>
+						<a href="#"><img src="Assets/Images/dummy_headline_4.jpg" alt="" /></a>
 					</figure>
 					<h3><a href="#">Eggum & Sivertsen med gjester - Møtes igjen</a></h3>
+					<p>
+						<b>Borggården</b>
+						<b>Inngang kr. 450 (ordinær)</b>
+					</p>
 				</article>
 			</li>
-		</ol>
+		</ul>
 		
 	</div>
 	

@@ -68,6 +68,21 @@ $(document).ready(function() {
 		}
 	});
 	
+	//loop through headline-events and set position of subtext
+	$('.second-row li, .third-row li').each(function() {
+		var height = $('p', this).height() + 10;
+		$('p', this).css({ 'bottom': '-' + height + 'px' });
+	});
+	
+	//animate headlines-event on hover
+	$('.second-row li, .third-row li').hover(function() {
+		var height = $('p', this).height() + 10;
+		$('h3, p', this).stop(true,true).animate({'bottom': '+=' + height + 'px'}, { duration: 160 });
+	}, function() {
+		var height = $('p', this).height() + 10;
+		$('h3, p', this).stop(true,true).animate({'bottom': '-=' + height + 'px'}, { duration: 360 });
+	});
+	
 	//ie7 fix
 	if( $('body').hasClass('ie7') ) {
 		function ie_fix(){return true;}
